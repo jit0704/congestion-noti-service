@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>모니터링</title>
+    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/base/js/common/includeHTML.js"></script>
+    <!-- 퍼블리싱 확인용 include -->
+    <script type="text/javascript" src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" include-html="/base/html/common/header.html"></header>
+      <!-- //header -->
+
+      <main class="container bg-nileblue">
+        <section class="congestion-noti-monitering">
+          <section class="ly-left">
+            <div class="bind">
+              <ul class="state-list">
+                <li>
+                  <span>동작 모드</span>
+                  <em>동작</em>
+                </li>
+                <li>
+                  <span>운영 모드</span>
+                  <em>자동</em>
+                </li>
+              </ul>
+            </div>
+            <!-- //bind -->
+            <div class="bind scenario">
+              <h2>시나리오 별 운영 현황</h2>
+              <ul class="state-list">
+                <li>
+                  <span>정체 상황</span>
+                  <em>가동</em>
+                </li>
+                <li>
+                  <span>정체 위치</span>
+                  <em>가동</em>
+                </li>
+                <li>
+                  <span>정체 원인</span>
+                  <em>가동</em>
+                </li>
+                <li>
+                  <span>차로 변경 유도</span>
+                  <em>가동</em>
+                </li>
+                <li>
+                  <span>예상 진출시간</span>
+                  <em>가동</em>
+                </li>
+                <li>
+                  <span>정체 영상</span>
+                  <em class="negative">중지</em>
+                </li>
+                <li>
+                  <span>신호정보</span>
+                  <em class="disabled">사용안함</em>
+                </li>
+                <li>
+                  <span>감응 신호</span>
+                  <em class="disabled">사용안함</em>
+                </li>
+                <li>
+                  <span>하부도로 상황</span>
+                  <em class="disabled">사용안함</em>
+                </li>
+                <li>
+                  <span>끼어들기</span>
+                  <em class="negative">중지</em>
+                </li>
+              </ul>
+            </div>
+            <!-- //bind -->
+            <div class="bind">
+              <ul class="state-list">
+                <li>
+                  <span>정체 알림</span>
+                  <em>정상</em>
+                </li>
+                <li>
+                  <span>센터 통신</span>
+                  <em class="negative">오류</em>
+                </li>
+              </ul>
+            </div>
+            <!-- //bind -->
+            <div class="log-bind">
+              <a href="#">로그 현황</a>
+            </div>
+            <!-- //log-bind -->
+          </section>
+          <!-- //ly-left -->
+          <section class="ly-content">
+            <article class="cell-container">
+              <h2>셀 현황</h2>
+              <div class="inner">셀 현황 영역</div>
+            </article>
+            <!-- //cell-container -->
+
+            <article class="vms-container">
+              <h2>VMS 현황</h2>
+              <div class="inner">
+                <ul class="vms-list">
+                  <li>
+                    <i>7</i>
+                    <div class="condition w-lg">
+                      <em>전방<br />진출로<br />혼잡</em>
+                    </div>
+                  </li>
+                  <li>
+                    <i>6</i>
+                    <div class="condition w-lg">
+                      <em>전방<br />진출로<br />혼잡</em>
+                    </div>
+                  </li>
+                  <li>
+                    <i>5</i>
+                    <div class="condition w-md">
+                      <em>전방<br />진출로<br />혼잡</em>
+                    </div>
+                  </li>
+                  <li>
+                    <i>4</i>
+                    <div class="condition w-md">
+                      <em>전방<br />진출로<br />혼잡</em>
+                    </div>
+                  </li>
+                  <li>
+                    <i>3</i>
+                    <div class="condition w-lg">
+                      <em>전방<br />진출로<br />혼잡</em>
+                    </div>
+                  </li>
+                  <li>
+                    <i>2</i>
+                    <div class="condition w-md">
+                      <em>전방<br />진출로<br />혼잡</em>
+                    </div>
+                  </li>
+                  <li>
+                    <i>1</i>
+                    <div class="condition w-inline">
+                      <em>850M 앞 2차로 정체 <span>온양 방향</span></em>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="vms-list type2">
+                  <li>
+                    <i>7</i>
+                    <div class="condition"></div>
+                  </li>
+                  <li>
+                    <i>6</i>
+                    <div class="condition"></div>
+                  </li>
+                  <li>
+                    <i>5</i>
+                    <div class="condition"></div>
+                  </li>
+                  <li>
+                    <i>4</i>
+                    <div class="condition"></div>
+                  </li>
+                  <li>
+                    <i>3</i>
+                    <div class="condition"></div>
+                  </li>
+                  <li>
+                    <i>2</i>
+                    <div class="condition"></div>
+                  </li>
+                  <li>
+                    <i>1</i>
+                    <div class="condition"></div>
+                  </li>
+                </ul>
+              </div>
+              <!-- //inner -->
+            </article>
+            <!-- //vms-container -->
+
+            <article class="vms-state-container">
+              <div class="inner">
+                <table>
+                  <colgroup>
+                    <col style="width: 114px" />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>지점</th>
+                      <td><i>9</i></td>
+                      <td><i>8</i></td>
+                      <td><i>7</i></td>
+                      <td><i>6</i></td>
+                      <td><i>5</i></td>
+                      <td><i>4</i></td>
+                      <td><i>3</i></td>
+                      <td><i>2</i></td>
+                      <td><i>1</i></td>
+                    </tr>
+                    <tr>
+                      <th>VMS</th>
+                      <td>
+                        <span class="none">-</span>
+                      </td>
+                      <td>
+                        <span class="none">-</span>
+                      </td>
+                      <td>
+                        <span>정상</span>
+                      </td>
+                      <td>
+                        <span>정상</span>
+                      </td>
+                      <td>
+                        <span>정상</span>
+                      </td>
+                      <td>
+                        <span>정상</span>
+                      </td>
+                      <td>
+                        <span>정상</span>
+                      </td>
+                      <td>
+                        <span>정상</span>
+                      </td>
+                      <td>
+                        <span>정상</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>CA 0 / CA1</th>
+                      <td>
+                        <div class="bind">
+                          <span>정상</span>
+                          <span class="negative">오류</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="bind">
+                          <span>정상</span>
+                          <span>정상</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="bind">
+                          <span>정상</span>
+                          <span>정상</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="bind">
+                          <span>정상</span>
+                          <span>정상</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="bind">
+                          <span>정상</span>
+                          <span>정상</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="bind">
+                          <span>정상</span>
+                          <span>정상</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="bind">
+                          <span>정상</span>
+                          <span>정상</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="bind">
+                          <span>정상</span>
+                          <span>정상</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="bind">
+                          <span>정상</span>
+                          <span>정상</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //inner -->
+            </article>
+            <!-- //vms-state-container -->
+          </section>
+          <!-- //ly-left -->
+        </section>
+        <!-- //congestion-noti-monitering -->
+      </main>
+      <!-- //container -->
+
+      <footer include-html="/base/html/common/footer.html"></footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>
