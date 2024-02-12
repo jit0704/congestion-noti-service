@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>로그 팝업</title>
+    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/swiper.js"></script>
+    <script type="text/javascript" src="/base/js/common/includeHTML.js"></script>
+    <!-- 퍼블리싱 확인용 include -->
+    <script type="text/javascript" src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/base/css/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div id="ex" class="modal">
+      <div class="modal-primary title-none log">
+        <div class="modal-header">
+          <div class="log-tab-nav">
+            <a href="#tab1">VMS 로그</a>
+            <a href="#tab2">CA 로그</a>
+            <a href="#tab3">센터 로그</a>
+          </div>
+          <!-- //help-tab-nav -->
+        </div>
+        <!-- //modal-header -->
+        <div class="modal-content">
+          <div class="inner">
+            <div class="function-group">
+              <select class="selectbox bordered type2" style="width: 119px">
+                <option>VMS1</option>
+              </select>
+              <button type="button" class="btn-primary c-navy">초기화</button>
+            </div>
+            <!-- //function-group -->
+            <div id="tab1" class="tab-content">
+              <div class="tbl-celled type2">
+                <table>
+                  <colgroup>
+                    <col style="width: 30%" />
+                    <col style="width: 70%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>발생시간</th>
+                      <th>정보</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2021-06-07 12:31:33</td>
+                      <td>1번 VMS 오류 발생</td>
+                    </tr>
+                    <tr>
+                      <td>2021-06-07 12:31:33</td>
+                      <td>2번 VMS 오류 발생</td>
+                    </tr>
+                    <tr>
+                      <td>2021-06-07 12:31:33</td>
+                      <td>3번 VMS 오류 발생</td>
+                    </tr>
+                    <tr>
+                      <td>2021-06-07 12:31:33</td>
+                      <td>1번 VMS 오류 발생</td>
+                    </tr>
+                    <tr>
+                      <td>2021-06-07 12:31:33</td>
+                      <td>2번 VMS 오류 발생</td>
+                    </tr>
+                    <tr>
+                      <td>2021-06-07 12:31:33</td>
+                      <td>3번 VMS 오류 발생</td>
+                    </tr>
+                    <tr>
+                      <td>2021-06-07 12:31:33</td>
+                      <td>1번 VMS 오류 발생</td>
+                    </tr>
+                    <tr>
+                      <td>2021-06-07 12:31:33</td>
+                      <td>2번 VMS 오류 발생</td>
+                    </tr>
+                    <tr>
+                      <td>2021-06-07 12:31:33</td>
+                      <td>3번 VMS 오류 발생</td>
+                    </tr>
+                    <tr>
+                      <td>2021-06-07 12:31:33</td>
+                      <td>3번 VMS 오류 발생</td>
+                    </tr>
+                    <tr>
+                      <td>2021-06-07 12:31:33</td>
+                      <td>3번 VMS 오류 발생</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //tbl-celled -->
+            </div>
+            <!-- //tab-content -->
+
+            <div id="tab2" class="tab-content">
+              <div class="txt-container">
+                <p>2024.01.29 14:00 1번 VMS 오류 발생</p>
+                <p>2024.01.29 13:59 2번 VMS 정상</p>
+              </div>
+              <!-- //txt-container -->
+            </div>
+            <!-- //tab-content -->
+
+            <div id="tab3" class="tab-content">
+              <div class="txt-container">
+                <p>2024.01.29 14:00 1번 VMS 오류 발생</p>
+                <p>2024.01.29 13:59 2번 VMS 정상</p>
+                <p>2024.01.29 13:59 3번 VMS 정상</p>
+              </div>
+              <!-- //txt-container -->
+            </div>
+            <!-- //tab-content -->
+          </div>
+          <!-- //inner -->
+        </div>
+        <!-- //modal-content -->
+      </div>
+      <!-- //management -->
+    </div>
+    <!-- //modal -->
+
+    <a href="#ex" class="btn-modal-open hidden">퍼블리싱 확인용 버튼</a>
+
+    <script>
+      $(function () {
+        $('.btn-modal-open').trigger('click'); // 퍼블리싱 확인용
+
+        // tab 클릭 이벤트
+        var $modal = $('.modal');
+        var $tabNav = $('.log-tab-nav a');
+        var $tabCon = $('.tab-content');
+        $(document).on('click', '.log-tab-nav a', function (e) {
+          e.preventDefault();
+          var $this = $(this);
+          var hash = $this.attr('href');
+          $tabNav.add($tabCon).removeClass('active');
+          $this.add($(hash)).addClass('active');
+        });
+        $tabNav.eq(1).trigger('click');
+      });
+    </script>
+  </body>
+</html>

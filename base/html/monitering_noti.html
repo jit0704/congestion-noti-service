@@ -8,6 +8,7 @@
     <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
     <script type="text/javascript" src="/base/js/common/includeHTML.js"></script>
+    <script type="text/javascript" src="/base/js/common/cell.js"></script>
     <!-- 퍼블리싱 확인용 include -->
     <script type="text/javascript" src="/base/js/common/ui.js"></script>
     <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
@@ -101,8 +102,134 @@
           <!-- //ly-left -->
           <section class="ly-content">
             <article class="cell-container">
-              <h2>셀 현황</h2>
-              <div class="inner">셀 현황 영역</div>
+              <header>
+                <h2>셀 현황</h2>
+                <span class="state-legend">
+                  <em>소통원활</em>
+                  <em>서행</em>
+                  <em>정체</em>
+                </span>
+              </header>
+              <div class="inner">
+                <!-- 각 구간 너비는 width값으로 제어 -->
+                <section class="section-info">
+                  <div class="num9" style="width: 118px">
+                    <i>9</i>
+                    <span><em>165m</em></span>
+                  </div>
+                  <div class="num8" style="width: 116px">
+                    <i>8</i>
+                    <span><em>150m</em></span>
+                  </div>
+                  <div class="num7" style="width: 55px">
+                    <i>7</i>
+                    <span><em>75m</em></span>
+                  </div>
+                  <div class="num6" style="width: 186px">
+                    <i>6</i>
+                    <span><em>245m</em></span>
+                  </div>
+                  <div class="num5" style="width: 179px">
+                    <i>5</i>
+                    <span><em>235m</em></span>
+                  </div>
+                  <div class="num4" style="width: 135px">
+                    <i>4</i>
+                    <span><em>175m</em></span>
+                  </div>
+                  <div class="num3" style="width: 135px">
+                    <i>3</i>
+                    <span><em>185m</em></span>
+                  </div>
+                  <div class="num2" style="width: 111px">
+                    <i>2</i>
+                    <span><em>150m</em></span>
+                  </div>
+                  <div class="num1" style="width: 342px">
+                    <i>1</i>
+                    <span><em>450m</em></span>
+                  </div>
+                  <div class="blank"></div>
+                </section>
+
+                <!-- cell만 존재하는 케이스의 경우에 영역의 너비는 width값으로 제어 -->
+                <div class="cell-bar sm" style="width: 100px">
+                  <div class="cell-group" data-cell="road-etc1-1"></div>
+                </div>
+                <!-- //cell-bar -->
+
+                <!-- cell만 존재하는 케이스의 경우에 영역의 너비는 width값으로 제어 -->
+                <div class="cell-bar" style="width: 200px">
+                  <div class="cell-group-bind">
+                    <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
+                    <div class="vertical-cell-group" style="flex-basis: 100px">
+                      <div class="top">
+                        <div class="cell-group" data-cell="road-etc2-1"></div>
+                      </div>
+                      <!-- //top -->
+                      <div class="bottom">
+                        <div class="cell-group" data-cell="road-etc2-2"></div>
+                      </div>
+                      <!-- //bottom -->
+                    </div>
+                    <!-- //vertical-cell-group -->
+                    <div class="cell-group" data-cell="road-etc2-3"></div>
+                  </div>
+                  <!-- //cell-group-bind -->
+                </div>
+                <!-- //cell-bar -->
+
+                <!-- TG 진입로 및 감속차로 -->
+                <div class="cell-bar ovh">
+                  <div class="cell-group-bind">
+                    <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
+                    <div class="vertical-cell-group" style="flex-basis: 200px">
+                      <div class="top">
+                        <div class="cell-group" data-cell="road-tg1"></div>
+                      </div>
+                      <!-- //top -->
+                      <div class="bottom">
+                        <div class="cell-group" data-cell="road-tg2"></div>
+                      </div>
+                      <!-- //bottom -->
+                    </div>
+                    <!-- //vertical-cell-group -->
+                    <div class="cell-group" data-cell="road-tg3"></div>
+                  </div>
+                  <!-- //cell-group-bind -->
+                  <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
+                  <div class="none horizon-right" style="flex-basis: 865px">
+                    <span class="txt">TG 진입로 및 감속차로</span>
+                  </div>
+                  <!-- //none -->
+                </div>
+                <!-- //cell-bar -->
+
+                <!-- 2차로 -->
+                <div class="cell-bar">
+                  <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
+                  <div class="none" style="flex-basis: 598px">
+                    <span class="txt">2차로</span>
+                  </div>
+                  <!-- //none -->
+                  <div class="cell-group" data-cell="road2"></div>
+                  <!-- //cell-group -->
+                </div>
+                <!-- //cell-bar -->
+
+                <!-- 1차로 -->
+                <div class="cell-bar">
+                  <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
+                  <div class="none" style="flex-basis: 498px">
+                    <span class="txt">1차로</span>
+                  </div>
+                  <!-- //none -->
+                  <div class="cell-group" data-cell="road1"></div>
+                  <!-- //cell-group -->
+                </div>
+                <!-- //cell-bar -->
+              </div>
+              <!-- //inner -->
             </article>
             <!-- //cell-container -->
 
