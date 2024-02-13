@@ -2458,6 +2458,634 @@ footer .copylight.bg-gray2 {
   border-top: 1px solid #e8e8e8;
 }
 
+/* 교통 정체 알림 화면 */
+.congestion-noti-monitering {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0 10px;
+  padding: 16px 34px;
+  background: #193d56;
+}
+.congestion-noti-monitering .ly-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px 0;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  width: 290px;
+}
+.congestion-noti-monitering .ly-left .bind {
+  width: 100%;
+  height: 111px;
+  padding: 20px 25px;
+  border-radius: 10px;
+  background: #2b526c;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.congestion-noti-monitering .ly-left .bind.scenario {
+  height: 500.5px;
+  padding-top: 0;
+}
+.congestion-noti-monitering .ly-left .bind.scenario h2 {
+  margin: 0 -25px;
+  padding: 10px 15px;
+  line-height: 32px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.congestion-noti-monitering .ly-left .bind.scenario .state-list {
+  height: auto;
+  padding: 25px 0;
+  gap: 10px 0;
+}
+.congestion-noti-monitering .ly-left .bind.scenario .state-list li span,
+.congestion-noti-monitering .ly-left .bind.scenario .state-list li em {
+  padding: 3.93px 0;
+  line-height: normal;
+}
+.congestion-noti-monitering .ly-left .bind.scenario .state-list li span {
+  border: 1px solid #597081;
+  border-radius: 5px;
+}
+.congestion-noti-monitering .ly-left .log-bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 80px;
+  padding: 20px 10px;
+  border-radius: 0px 0px 10px 10px;
+  background: #2b516c;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.congestion-noti-monitering .ly-left .log-bind a {
+  width: 150px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  background: #193d56;
+}
+.congestion-noti-monitering .ly-left .state-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  height: 100%;
+}
+.congestion-noti-monitering .ly-left .state-list li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0 5px;
+  text-align: center;
+}
+.congestion-noti-monitering .ly-left .state-list li span,
+.congestion-noti-monitering .ly-left .state-list li em {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 33px;
+  color: #fff;
+  letter-spacing: -0.48px;
+}
+.congestion-noti-monitering .ly-left .state-list li em {
+  border-radius: 5px;
+  background: #193d56;
+}
+.congestion-noti-monitering .ly-left .state-list li .disabled {
+  color: rgba(255, 255, 255, 0.5);
+  background: #3d637e;
+}
+.congestion-noti-monitering .ly-left .state-list li .negative {
+  background: #680000;
+}
+.congestion-noti-monitering .ly-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px 0;
+  width: 100%;
+}
+.congestion-noti-monitering .ly-content > article {
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.congestion-noti-monitering .ly-content > article h2 {
+  padding: 9px 15px;
+  font-size: 20px;
+  color: #1e5f8d;
+  font-weight: 800;
+  border-bottom: 1px solid #e3e3e3;
+}
+.congestion-noti-monitering .ly-content > article header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e3e3e3;
+}
+.congestion-noti-monitering .ly-content > article header h2 {
+  border-bottom: 0;
+}
+.congestion-noti-monitering .ly-content > article header .state-legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 236px;
+  margin-right: 15px;
+}
+.congestion-noti-monitering .ly-content > article header .state-legend em {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 3px 0 4px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+.congestion-noti-monitering .ly-content > article header .state-legend em:nth-child(1) {
+  color: #fff;
+  background: #00c337;
+}
+.congestion-noti-monitering .ly-content > article header .state-legend em:nth-child(2) {
+  color: #b4921c;
+  background: #ffee59;
+}
+.congestion-noti-monitering .ly-content > article header .state-legend em:nth-child(3) {
+  color: #fff;
+  background: #c20000;
+}
+.congestion-noti-monitering .ly-content > article > .inner {
+  padding: 15px 30px;
+}
+.congestion-noti-monitering .ly-content .cell-container .inner {
+  position: relative;
+  padding: 94.5px 24.5px 21px;
+}
+.congestion-noti-monitering .ly-content .cell-container .inner .section-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: absolute;
+  top: 21px;
+  left: 24.5px;
+  right: 24.5px;
+  height: 120px;
+  padding-bottom: 8px;
+}
+.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] {
+  position: relative;
+  border-right: 2px solid #193d56;
+}
+.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] i {
+  position: absolute;
+  top: 0;
+  right: -14px;
+  width: 28px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 999px;
+  background: #193d56;
+}
+.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 45px 2px 0;
+  line-height: 17px;
+  text-align: center;
+  font-size: 14px;
+  color: #b1b1b1;
+}
+.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] span em {
+  background: #fff;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] span::before {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: url(/base/images/arr_section.png) no-repeat 0 50%;
+  background-size: 148px 7px;
+}
+.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] span::after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background: url(/base/images/arr_section.png) no-repeat 0 50%;
+  background-size: 148px 7px;
+}
+.congestion-noti-monitering .ly-content .cell-container .inner .section-info .blank {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.congestion-noti-monitering .ly-content .cell-container .inner .cell-bar:not(:first-child) {
+  margin-top: 1px;
+}
+.congestion-noti-monitering .ly-content .vms-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.congestion-noti-monitering .ly-content .vms-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.congestion-noti-monitering .ly-content .vms-list li i {
+  width: 28px;
+  line-height: 28px;
+  text-align: center;
+  color: #59839e;
+  font-weight: 800;
+  border-radius: 5px 0px 0px 5px;
+  background: #d8eaf6;
+}
+.congestion-noti-monitering .ly-content .vms-list li .condition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 153px;
+  text-align: center;
+  background: #3c3c3c;
+}
+.congestion-noti-monitering .ly-content .vms-list li .condition.w-lg {
+  width: 96px;
+  font-size: 26px;
+}
+.congestion-noti-monitering .ly-content .vms-list li .condition.w-md {
+  width: 77px;
+  font-size: 22px;
+}
+.congestion-noti-monitering .ly-content .vms-list li .condition.w-inline {
+  width: 468px;
+  height: 47px;
+  font-size: 24px;
+}
+.congestion-noti-monitering .ly-content .vms-list li .condition.w-inline span {
+  color: #fff;
+}
+.congestion-noti-monitering .ly-content .vms-list li .condition em {
+  color: #f00;
+  font-weight: 800;
+}
+.congestion-noti-monitering .ly-content .vms-list.type2 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0 4.2%;
+  margin-top: 15px;
+}
+.congestion-noti-monitering .ly-content .vms-list.type2 li:last-child {
+  margin-left: -20px;
+}
+.congestion-noti-monitering .ly-content .vms-list.type2 li:last-child .condition {
+  width: 270px;
+}
+.congestion-noti-monitering .ly-content .vms-list.type2 li:nth-child(4), .congestion-noti-monitering .ly-content .vms-list.type2 li:nth-child(5) {
+  margin-left: -20px;
+}
+.congestion-noti-monitering .ly-content .vms-list.type2 .condition {
+  width: 85px;
+  height: 151px;
+  background: #848484;
+}
+.congestion-noti-monitering .ly-content .vms-state-container .inner {
+  padding-right: 10px;
+}
+.congestion-noti-monitering .ly-content .vms-state-container table th,
+.congestion-noti-monitering .ly-content .vms-state-container table td {
+  padding-bottom: 5px;
+}
+.congestion-noti-monitering .ly-content .vms-state-container table tr:not(:first-child) td {
+  padding-right: 20px;
+}
+.congestion-noti-monitering .ly-content .vms-state-container table tr:last-child th,
+.congestion-noti-monitering .ly-content .vms-state-container table tr:last-child td {
+  padding-bottom: 0;
+}
+.congestion-noti-monitering .ly-content .vms-state-container table th {
+  font-size: 14px;
+  color: #7d7d7d;
+  text-align: left;
+  letter-spacing: -0.42px;
+}
+.congestion-noti-monitering .ly-content .vms-state-container table td {
+  text-align: center;
+}
+.congestion-noti-monitering .ly-content .vms-state-container table td i {
+  width: 27px;
+  margin-left: -20px;
+  line-height: 27px;
+  text-align: center;
+  color: #59839e;
+  font-weight: 800;
+  border-radius: 5px;
+  background: #d8eaf6;
+}
+.congestion-noti-monitering .ly-content .vms-state-container table td > span {
+  display: block;
+  line-height: 25px;
+  font-size: 14px;
+  color: #254e6c;
+  border-radius: 5px;
+  background: #a4cfee;
+}
+.congestion-noti-monitering .ly-content .vms-state-container table td > span.none {
+  background: #ededed;
+}
+.congestion-noti-monitering .ly-content .vms-state-container table td .bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0 5px;
+}
+.congestion-noti-monitering .ly-content .vms-state-container table td .bind span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 23px;
+  font-size: 14px;
+  color: #254e6c;
+  border-radius: 5px;
+  background: #a4cfee;
+}
+.congestion-noti-monitering .ly-content .vms-state-container table td .bind span.negative {
+  color: #550a0a;
+  background: #ee8989;
+}
+
+/* cell영역 컴포넌트 */
+.cell-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 30px;
+}
+.cell-bar.ovh {
+  overflow: hidden;
+}
+.cell-bar.sm {
+  height: 15px;
+}
+.cell-bar .none {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-inline: 10px;
+  background: #ececec;
+}
+.cell-bar .none.horizon-right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.cell-bar .none .txt {
+  font-size: 14px;
+  color: #808080;
+  font-weight: 700;
+}
+.cell-bar .cell-group {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.cell-bar .cell-group span {
+  border-left: 1px solid #fff;
+  background: #00c337;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.cell-bar .cell-group span.slow {
+  background: #ffee59;
+}
+.cell-bar .cell-group span.cong {
+  background: #c20000;
+}
+.cell-bar .cell-group-bind {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.cell-bar .cell-group-bind .vertical-cell-group {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.cell-bar .cell-group-bind .vertical-cell-group .top .cell-group span {
+  border-bottom: 1px solid #fff;
+}
+.cell-bar .cell-group-bind .vertical-cell-group .top,
+.cell-bar .cell-group-bind .vertical-cell-group .bottom {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+}
+
 /* ###############################
     페이지
 ################################## */
@@ -3717,6 +4345,17 @@ footer .copylight.bg-gray2 {
   }
 }
 /* 페이지 */
+@media screen and (max-height: 925px) {
+  .congestion-noti-monitering {
+    padding-block: 13px;
+  }
+  .congestion-noti-monitering .ly-left .bind {
+    height: 96px;
+  }
+  .congestion-noti-monitering .ly-content > article > .inner {
+    padding-block: 8px;
+  }
+}
 @media screen and (min-height: 969px) {
   /* information > 우측 하단 리스트 */
   [data-componant=camera-state] {
@@ -3759,634 +4398,6 @@ footer .copylight.bg-gray2 {
     height: 523px;
   }
 }
-/* 교통 정체 알림 화면 */
-.congestion-noti-monitering {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  gap: 0 10px;
-  padding: 18px 34px 20px;
-  background: #193d56;
-}
-.congestion-noti-monitering .ly-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 10px 0;
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
-  width: 290px;
-}
-.congestion-noti-monitering .ly-left .bind {
-  width: 100%;
-  height: 111px;
-  padding: 20px 25px;
-  border-radius: 10px;
-  background: #2b526c;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-}
-.congestion-noti-monitering .ly-left .bind.scenario {
-  height: 500.5px;
-  padding-top: 0;
-}
-.congestion-noti-monitering .ly-left .bind.scenario h2 {
-  margin: 0 -25px;
-  padding: 10px 15px;
-  line-height: 32px;
-  text-align: left;
-  font-size: 20px;
-  font-weight: 800;
-  color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-.congestion-noti-monitering .ly-left .bind.scenario .state-list {
-  height: auto;
-  padding: 25px 0;
-  gap: 10px 0;
-}
-.congestion-noti-monitering .ly-left .bind.scenario .state-list li span,
-.congestion-noti-monitering .ly-left .bind.scenario .state-list li em {
-  padding: 3.93px 0;
-  line-height: normal;
-}
-.congestion-noti-monitering .ly-left .bind.scenario .state-list li span {
-  border: 1px solid #597081;
-  border-radius: 5px;
-}
-.congestion-noti-monitering .ly-left .log-bind {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 80px;
-  padding: 20px 10px;
-  border-radius: 0px 0px 10px 10px;
-  background: #2b516c;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-}
-.congestion-noti-monitering .ly-left .log-bind a {
-  width: 150px;
-  line-height: 40px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-  border-radius: 5px;
-  background: #193d56;
-}
-.congestion-noti-monitering .ly-left .state-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 5px;
-  height: 100%;
-}
-.congestion-noti-monitering .ly-left .state-list li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 0 5px;
-  text-align: center;
-}
-.congestion-noti-monitering .ly-left .state-list li span,
-.congestion-noti-monitering .ly-left .state-list li em {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  line-height: 33px;
-  color: #fff;
-  letter-spacing: -0.48px;
-}
-.congestion-noti-monitering .ly-left .state-list li em {
-  border-radius: 5px;
-  background: #193d56;
-}
-.congestion-noti-monitering .ly-left .state-list li .disabled {
-  color: rgba(255, 255, 255, 0.5);
-  background: #3d637e;
-}
-.congestion-noti-monitering .ly-left .state-list li .negative {
-  background: #680000;
-}
-.congestion-noti-monitering .ly-content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  gap: 10px 0;
-  width: 100%;
-}
-.congestion-noti-monitering .ly-content > article {
-  border-radius: 10px;
-  background: #fff;
-  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
-}
-.congestion-noti-monitering .ly-content > article h2 {
-  padding: 9px 15px;
-  font-size: 20px;
-  color: #1e5f8d;
-  font-weight: 800;
-  border-bottom: 1px solid #e3e3e3;
-}
-.congestion-noti-monitering .ly-content > article header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: 1px solid #e3e3e3;
-}
-.congestion-noti-monitering .ly-content > article header h2 {
-  border-bottom: 0;
-}
-.congestion-noti-monitering .ly-content > article header .state-legend {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 236px;
-  margin-right: 15px;
-}
-.congestion-noti-monitering .ly-content > article header .state-legend em {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 3px 0 4px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 700;
-}
-.congestion-noti-monitering .ly-content > article header .state-legend em:nth-child(1) {
-  color: #fff;
-  background: #00c337;
-}
-.congestion-noti-monitering .ly-content > article header .state-legend em:nth-child(2) {
-  color: #b4921c;
-  background: #ffee59;
-}
-.congestion-noti-monitering .ly-content > article header .state-legend em:nth-child(3) {
-  color: #fff;
-  background: #c20000;
-}
-.congestion-noti-monitering .ly-content > article > .inner {
-  padding: 15px 30px;
-}
-.congestion-noti-monitering .ly-content .cell-container .inner {
-  position: relative;
-  padding: 94.5px 24.5px 21px;
-}
-.congestion-noti-monitering .ly-content .cell-container .inner .section-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  position: absolute;
-  top: 21px;
-  left: 24.5px;
-  right: 24.5px;
-  height: 120px;
-  padding-bottom: 8px;
-}
-.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] {
-  position: relative;
-  border-right: 2px solid #193d56;
-}
-.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] i {
-  position: absolute;
-  top: 0;
-  right: -14px;
-  width: 28px;
-  line-height: 28px;
-  text-align: center;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  border-radius: 999px;
-  background: #193d56;
-}
-.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin: 45px 2px 0;
-  line-height: 17px;
-  text-align: center;
-  font-size: 14px;
-  color: #b1b1b1;
-}
-.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] span em {
-  background: #fff;
-  border-left: 3px solid #fff;
-  border-right: 3px solid #fff;
-}
-.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] span::before {
-  content: "";
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  background: url(/base/images/arr_section.png) no-repeat 0 50%;
-  background-size: 148px 7px;
-}
-.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] span::after {
-  content: "";
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-  background: url(/base/images/arr_section.png) no-repeat 0 50%;
-  background-size: 148px 7px;
-}
-.congestion-noti-monitering .ly-content .cell-container .inner .section-info .blank {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-.congestion-noti-monitering .ly-content .cell-container .inner .cell-bar:not(:first-child) {
-  margin-top: 1px;
-}
-.congestion-noti-monitering .ly-content .vms-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.congestion-noti-monitering .ly-content .vms-list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-.congestion-noti-monitering .ly-content .vms-list li i {
-  width: 28px;
-  line-height: 28px;
-  text-align: center;
-  color: #59839e;
-  font-weight: 800;
-  border-radius: 5px 0px 0px 5px;
-  background: #d8eaf6;
-}
-.congestion-noti-monitering .ly-content .vms-list li .condition {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 153px;
-  text-align: center;
-  background: #3c3c3c;
-}
-.congestion-noti-monitering .ly-content .vms-list li .condition.w-lg {
-  width: 96px;
-  font-size: 26px;
-}
-.congestion-noti-monitering .ly-content .vms-list li .condition.w-md {
-  width: 77px;
-  font-size: 22px;
-}
-.congestion-noti-monitering .ly-content .vms-list li .condition.w-inline {
-  width: 468px;
-  height: 47px;
-  font-size: 24px;
-}
-.congestion-noti-monitering .ly-content .vms-list li .condition.w-inline span {
-  color: #fff;
-}
-.congestion-noti-monitering .ly-content .vms-list li .condition em {
-  color: #f00;
-  font-weight: 800;
-}
-.congestion-noti-monitering .ly-content .vms-list.type2 {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  gap: 0 4.2%;
-  margin-top: 15px;
-}
-.congestion-noti-monitering .ly-content .vms-list.type2 li:last-child {
-  margin-left: -20px;
-}
-.congestion-noti-monitering .ly-content .vms-list.type2 li:last-child .condition {
-  width: 270px;
-}
-.congestion-noti-monitering .ly-content .vms-list.type2 li:nth-child(4), .congestion-noti-monitering .ly-content .vms-list.type2 li:nth-child(5) {
-  margin-left: -20px;
-}
-.congestion-noti-monitering .ly-content .vms-list.type2 .condition {
-  width: 85px;
-  height: 151px;
-  background: #848484;
-}
-.congestion-noti-monitering .ly-content .vms-state-container .inner {
-  padding-right: 10px;
-}
-.congestion-noti-monitering .ly-content .vms-state-container table th,
-.congestion-noti-monitering .ly-content .vms-state-container table td {
-  padding-bottom: 5px;
-}
-.congestion-noti-monitering .ly-content .vms-state-container table tr:not(:first-child) td {
-  padding-right: 20px;
-}
-.congestion-noti-monitering .ly-content .vms-state-container table tr:last-child th,
-.congestion-noti-monitering .ly-content .vms-state-container table tr:last-child td {
-  padding-bottom: 0;
-}
-.congestion-noti-monitering .ly-content .vms-state-container table th {
-  font-size: 14px;
-  color: #7d7d7d;
-  text-align: left;
-  letter-spacing: -0.42px;
-}
-.congestion-noti-monitering .ly-content .vms-state-container table td {
-  text-align: center;
-}
-.congestion-noti-monitering .ly-content .vms-state-container table td i {
-  width: 27px;
-  margin-left: -20px;
-  line-height: 27px;
-  text-align: center;
-  color: #59839e;
-  font-weight: 800;
-  border-radius: 5px;
-  background: #d8eaf6;
-}
-.congestion-noti-monitering .ly-content .vms-state-container table td > span {
-  display: block;
-  line-height: 25px;
-  font-size: 14px;
-  color: #254e6c;
-  border-radius: 5px;
-  background: #a4cfee;
-}
-.congestion-noti-monitering .ly-content .vms-state-container table td > span.none {
-  background: #ededed;
-}
-.congestion-noti-monitering .ly-content .vms-state-container table td .bind {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  gap: 0 5px;
-}
-.congestion-noti-monitering .ly-content .vms-state-container table td .bind span {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  line-height: 23px;
-  font-size: 14px;
-  color: #254e6c;
-  border-radius: 5px;
-  background: #a4cfee;
-}
-.congestion-noti-monitering .ly-content .vms-state-container table td .bind span.negative {
-  color: #550a0a;
-  background: #ee8989;
-}
-
-/* cell영역 컴포넌트 */
-.cell-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 30px;
-}
-.cell-bar.ovh {
-  overflow: hidden;
-}
-.cell-bar.sm {
-  height: 15px;
-}
-.cell-bar .none {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-inline: 10px;
-  background: #ececec;
-}
-.cell-bar .none.horizon-right {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-.cell-bar .none .txt {
-  font-size: 14px;
-  color: #808080;
-  font-weight: 700;
-}
-.cell-bar .cell-group {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  overflow: hidden;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-.cell-bar .cell-group span {
-  border-left: 1px solid #fff;
-  background: #00c337;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.cell-bar .cell-group span.slow {
-  background: #ffee59;
-}
-.cell-bar .cell-group span.cong {
-  background: #c20000;
-}
-.cell-bar .cell-group-bind {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-.cell-bar .cell-group-bind .vertical-cell-group {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-.cell-bar .cell-group-bind .vertical-cell-group .top .cell-group span {
-  border-bottom: 1px solid #fff;
-}
-.cell-bar .cell-group-bind .vertical-cell-group .top,
-.cell-bar .cell-group-bind .vertical-cell-group .bottom {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  width: 100%;
-}
-
 /* ###############################
     개발에서 추가한 CSS
 ################################## */
