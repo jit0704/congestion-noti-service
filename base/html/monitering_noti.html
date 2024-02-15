@@ -152,60 +152,66 @@
                   <div class="blank"></div>
                 </section>
 
-                <!-- cell만 존재하는 케이스의 경우에 영역의 너비는 width값으로 제어 -->
-                <div class="cell-bar sm" style="width: 100px">
-                  <div class="cell-group" data-cell="road-etc1-1"></div>
-                </div>
-                <!-- //cell-bar -->
-
-                <!-- cell만 존재하는 케이스의 경우에 영역의 너비는 width값으로 제어 -->
-                <div class="cell-bar" style="width: 200px">
-                  <div class="cell-group-bind">
-                    <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
-                    <div class="vertical-cell-group" style="flex-basis: 100px">
+                <!-- ##########################################################
+                  240215: TG 진입로 및 감속차로 영역 전체 수정
+                ###############################################################  -->
+                <div class="cell-bar h-auto ovh">
+                  <!-- ######## TG진입로 1~5차로 ######## -->
+                  <div class="cell-group-bind vertical" style="flex: 0 0 77px">
+                    <div class="vertical-cell-group sm">
+                      <div class="cell-bar">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //cell-bar -->
+                    </div>
+                    <!-- //vertical-cell-group -->
+                    <div class="vertical-cell-group">
                       <div class="top">
-                        <div class="cell-group" data-cell="road-etc2-1"></div>
+                        <div class="cell-group"></div>
                       </div>
                       <!-- //top -->
                       <div class="bottom">
-                        <div class="cell-group" data-cell="road-etc2-2"></div>
+                        <div class="cell-group"></div>
                       </div>
                       <!-- //bottom -->
                     </div>
                     <!-- //vertical-cell-group -->
-                    <div class="cell-group" data-cell="road-etc2-3"></div>
+                    <div class="vertical-cell-group">
+                      <div class="top">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //top -->
+                      <div class="bottom">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //bottom -->
+                    </div>
+                    <!-- //vertical-cell-group -->
+                  </div>
+                  <!-- //cell-group-bind -->
+
+                  <!-- ######## TG진입로 1~2차로 ######## -->
+                  <div class="cell-group-bind vertical" style="height: 60px">
+                    <div class="cell-group h30"></div>
+                    <div class="cell-group h30"></div>
+                  </div>
+                  <!-- //cell-group-bind -->
+
+                  <!-- ######## TG진입로 1차로 ######## -->
+                  <div class="cell-group-bind" style="flex: 0 0 1400px">
+                    <div class="cell-group h30"></div>
+                    <div class="none horizon-right" style="flex-basis: 865px">
+                      <span class="txt">TG 진입로 및 감속차로</span>
+                    </div>
+                    <!-- //none -->
                   </div>
                   <!-- //cell-group-bind -->
                 </div>
                 <!-- //cell-bar -->
 
-                <!-- TG 진입로 및 감속차로 -->
-                <div class="cell-bar ovh">
-                  <div class="cell-group-bind">
-                    <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
-                    <div class="vertical-cell-group" style="flex-basis: 200px">
-                      <div class="top">
-                        <div class="cell-group" data-cell="road-tg1"></div>
-                      </div>
-                      <!-- //top -->
-                      <div class="bottom">
-                        <div class="cell-group" data-cell="road-tg2"></div>
-                      </div>
-                      <!-- //bottom -->
-                    </div>
-                    <!-- //vertical-cell-group -->
-                    <div class="cell-group" data-cell="road-tg3"></div>
-                  </div>
-                  <!-- //cell-group-bind -->
-                  <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
-                  <div class="none horizon-right" style="flex-basis: 865px">
-                    <span class="txt">TG 진입로 및 감속차로</span>
-                  </div>
-                  <!-- //none -->
-                </div>
-                <!-- //cell-bar -->
-
-                <!-- 2차로 -->
+                <!-- ##########################################################
+                  본선 2차로
+                ###############################################################  -->
                 <div class="cell-bar">
                   <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
                   <div class="none" style="flex-basis: 598px">
@@ -217,7 +223,9 @@
                 </div>
                 <!-- //cell-bar -->
 
-                <!-- 1차로 -->
+                <!-- ##########################################################
+                  본선 1차로
+                ###############################################################  -->
                 <div class="cell-bar">
                   <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
                   <div class="none" style="flex-basis: 498px">

@@ -49,27 +49,27 @@ $(function () {
    */
   function cellCondition($data, span, num) {
     // 조건: 기타 차로
-    if ($data === 'road-etc1-1' && num >= 1 && num <= 15) {
-      span.addClass('cong');
-    }
+    // if ($data === 'road-etc1-1' && num >= 1 && num <= 15) {
+    //   span.addClass('cong');
+    // }
 
-    var etc = ['road-etc2-1', 'road-etc2-2', 'road-etc2-3'];
-    etc.map(function (data) {
-      if ($data === data && num >= 1 && num <= 15) {
-        span.addClass('cong');
-      }
-    });
+    // var etc = ['road-etc2-1', 'road-etc2-2', 'road-etc2-3'];
+    // etc.map(function (data) {
+    //   if ($data === data && num >= 1 && num <= 15) {
+    //     span.addClass('cong');
+    //   }
+    // });
 
     // 조건: TG 진입로 및 감속차로
-    if ($data === 'road-tg1' && num >= 1 && num <= 10) {
-      span.addClass('cong');
-    }
-    if ($data === 'road-tg2' && num >= 10 && num <= 20) {
-      span.addClass('cong');
-    }
-    if ($data === 'road-tg3' && num >= 1 && num <= 20) {
-      span.addClass('slow');
-    }
+    // if ($data === 'road-tg1' && num >= 1 && num <= 10) {
+    //   span.addClass('cong');
+    // }
+    // if ($data === 'road-tg2' && num >= 10 && num <= 20) {
+    //   span.addClass('cong');
+    // }
+    // if ($data === 'road-tg3' && num >= 1 && num <= 20) {
+    //   span.addClass('slow');
+    // }
 
     // 조건: 2차로
     if ($data === 'road2' && num >= 20 && num <= 40) {

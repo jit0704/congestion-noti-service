@@ -2704,6 +2704,9 @@ footer .copylight.bg-gray2 {
 .congestion-noti-monitering .ly-content > article > .inner {
   padding: 15px 30px;
 }
+.congestion-noti-monitering .ly-content .cell-container {
+  min-height: 300px;
+}
 .congestion-noti-monitering .ly-content .cell-container .inner {
   position: relative;
   padding: 94.5px 24.5px 21px;
@@ -2979,8 +2982,11 @@ footer .copylight.bg-gray2 {
 .cell-bar.ovh {
   overflow: hidden;
 }
-.cell-bar.sm {
-  height: 15px;
+.cell-bar.h-auto {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: auto;
 }
 .cell-bar .none {
   -webkit-box-flex: 0;
@@ -3008,6 +3014,7 @@ footer .copylight.bg-gray2 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  height: 30px;
 }
 .cell-bar .none .txt {
   font-size: 14px;
@@ -3030,6 +3037,9 @@ footer .copylight.bg-gray2 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+.cell-bar .cell-group.h30 {
+  height: 30px;
 }
 .cell-bar .cell-group span {
   border-left: 1px solid #fff;
@@ -3058,6 +3068,22 @@ footer .copylight.bg-gray2 {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
+.cell-bar .cell-group-bind.vertical {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.cell-bar .cell-group-bind.vertical .vertical-cell-group {
+  width: 100%;
+  height: 30px;
+}
+.cell-bar .cell-group-bind.vertical .vertical-cell-group ~ .vertical-cell-group {
+  border-top: 1px solid #fff;
+}
+.cell-bar .cell-group-bind.vertical > .cell-group:not(:first-child) {
+  border-top: 1px solid #fff;
+}
 .cell-bar .cell-group-bind .vertical-cell-group {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
@@ -3074,6 +3100,9 @@ footer .copylight.bg-gray2 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+.cell-bar .cell-group-bind .vertical-cell-group.sm {
+  height: 15px;
 }
 .cell-bar .cell-group-bind .vertical-cell-group .top .cell-group span {
   border-bottom: 1px solid #fff;
