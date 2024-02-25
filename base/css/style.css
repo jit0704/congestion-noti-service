@@ -2705,7 +2705,7 @@ footer .copylight.bg-gray2 {
   padding: 15px 30px;
 }
 .congestion-noti-monitering .ly-content .cell-container {
-  min-height: 300px;
+  min-height: 331px;
 }
 .congestion-noti-monitering .ly-content .cell-container .inner {
   position: relative;
@@ -2795,6 +2795,43 @@ footer .copylight.bg-gray2 {
 .congestion-noti-monitering .ly-content .cell-container .inner .cell-bar:not(:first-child) {
   margin-top: 1px;
 }
+.congestion-noti-monitering .ly-content .vms-bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0 11px;
+}
+.congestion-noti-monitering .ly-content .vms-bind article {
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
+}
+.congestion-noti-monitering .ly-content .vms-bind article h2 {
+  padding: 9px 15px;
+  font-size: 20px;
+  color: #1e5f8d;
+  font-weight: 800;
+  border-bottom: 1px solid #e3e3e3;
+}
+.congestion-noti-monitering .ly-content .vms-bind .vms-container {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1031px;
+          flex: 0 0 1031px;
+  padding-bottom: 36.5px;
+}
+.congestion-noti-monitering .ly-content .vms-group {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 .congestion-noti-monitering .ly-content .vms-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2806,21 +2843,7 @@ footer .copylight.bg-gray2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-.congestion-noti-monitering .ly-content .vms-list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  padding: 36.5px 30px 15px;
 }
 .congestion-noti-monitering .ly-content .vms-list li i {
   width: 28px;
@@ -2845,16 +2868,16 @@ footer .copylight.bg-gray2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 153px;
+  height: 223px;
   text-align: center;
-  background: #3c3c3c;
+  background: #000;
 }
 .congestion-noti-monitering .ly-content .vms-list li .condition.w-lg {
-  width: 96px;
+  width: 139px;
   font-size: 26px;
 }
 .congestion-noti-monitering .ly-content .vms-list li .condition.w-md {
-  width: 77px;
+  width: 110px;
   font-size: 22px;
 }
 .congestion-noti-monitering .ly-content .vms-list li .condition.w-inline {
@@ -2869,42 +2892,88 @@ footer .copylight.bg-gray2 {
   color: #f00;
   font-weight: 800;
 }
-.congestion-noti-monitering .ly-content .vms-list.type2 {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  gap: 0 4.2%;
-  margin-top: 15px;
+.congestion-noti-monitering .ly-content .vms-list li.error {
+  background: transparent;
 }
-.congestion-noti-monitering .ly-content .vms-list.type2 li:last-child {
-  margin-left: -20px;
+.congestion-noti-monitering .ly-content .vms-list li.error .condition {
+  background: url(/base/images/ic_none2.png) no-repeat 50% 50% #000;
+  background-size: 79px 79px;
 }
-.congestion-noti-monitering .ly-content .vms-list.type2 li:last-child .condition {
-  width: 270px;
+.congestion-noti-monitering .ly-content .vms-list li.error .btn-vms-del {
+  position: absolute;
+  top: 14px;
+  right: -12px;
+  width: 40px;
+  height: 40px;
+  background: url(/base/images/btn_close_special.png) no-repeat 2px 2px;
+  background-size: contain;
 }
-.congestion-noti-monitering .ly-content .vms-list.type2 li:nth-child(4), .congestion-noti-monitering .ly-content .vms-list.type2 li:nth-child(5) {
-  margin-left: -20px;
+.congestion-noti-monitering .ly-content .vms-inline {
+  margin-left: 30px;
 }
-.congestion-noti-monitering .ly-content .vms-list.type2 .condition {
-  width: 85px;
-  height: 151px;
-  background: #848484;
+.congestion-noti-monitering .ly-content .vms-inline i {
+  width: 28px;
+  line-height: 28px;
+  text-align: center;
+  color: #59839e;
+  font-weight: 800;
+  border-radius: 5px 0px 0px 5px;
+  background: #d8eaf6;
+}
+.congestion-noti-monitering .ly-content .vms-inline .condition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 787px;
+  height: 78px;
+  text-align: center;
+  background: #000;
+}
+.congestion-noti-monitering .ly-content .vms-inline .condition em {
+  font-size: 24px;
+  color: #f00;
+  font-weight: 800;
+}
+.congestion-noti-monitering .ly-content .vms-inline .condition em span {
+  color: #fff;
+}
+.congestion-noti-monitering .ly-content .vms-realtime-container {
+  overflow: hidden;
+}
+.congestion-noti-monitering .ly-content .vms-realtime-container .inner {
+  width: 395px;
+  height: 222px;
+  margin: 22px auto;
+}
+.congestion-noti-monitering .ly-content .vms-state-container {
+  margin-top: 10px;
 }
 .congestion-noti-monitering .ly-content .vms-state-container .inner {
-  padding-right: 10px;
+  padding: 25px 20.5px;
 }
 .congestion-noti-monitering .ly-content .vms-state-container table th,
 .congestion-noti-monitering .ly-content .vms-state-container table td {
   padding-bottom: 5px;
 }
 .congestion-noti-monitering .ly-content .vms-state-container table tr:not(:first-child) td {
-  padding-right: 20px;
+  padding-right: 8px;
 }
 .congestion-noti-monitering .ly-content .vms-state-container table tr:last-child th,
 .congestion-noti-monitering .ly-content .vms-state-container table tr:last-child td {
   padding-bottom: 0;
 }
 .congestion-noti-monitering .ly-content .vms-state-container table th {
+  padding-right: 15px;
   font-size: 14px;
   color: #7d7d7d;
   text-align: left;
@@ -2915,7 +2984,8 @@ footer .copylight.bg-gray2 {
 }
 .congestion-noti-monitering .ly-content .vms-state-container table td i {
   width: 27px;
-  margin-left: -20px;
+  margin-left: -9px;
+  margin-bottom: 1.5px;
   line-height: 27px;
   text-align: center;
   color: #59839e;
@@ -2934,30 +3004,7 @@ footer .copylight.bg-gray2 {
 .congestion-noti-monitering .ly-content .vms-state-container table td > span.none {
   background: #ededed;
 }
-.congestion-noti-monitering .ly-content .vms-state-container table td .bind {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  gap: 0 5px;
-}
-.congestion-noti-monitering .ly-content .vms-state-container table td .bind span {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  line-height: 23px;
-  font-size: 14px;
-  color: #254e6c;
-  border-radius: 5px;
-  background: #a4cfee;
-}
-.congestion-noti-monitering .ly-content .vms-state-container table td .bind span.negative {
+.congestion-noti-monitering .ly-content .vms-state-container table td > span.negative {
   color: #550a0a;
   background: #ee8989;
 }
@@ -2975,9 +3022,8 @@ footer .copylight.bg-gray2 {
       -ms-flex-pack: start;
           justify-content: flex-start;
   position: relative;
-  z-index: 1;
   width: 100%;
-  height: 30px;
+  height: 36px;
 }
 .cell-bar.ovh {
   overflow: hidden;
@@ -3014,7 +3060,7 @@ footer .copylight.bg-gray2 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  height: 30px;
+  height: 36px;
 }
 .cell-bar .none .txt {
   font-size: 14px;
@@ -3038,8 +3084,8 @@ footer .copylight.bg-gray2 {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-.cell-bar .cell-group.h30 {
-  height: 30px;
+.cell-bar .cell-group.h36 {
+  height: 36px;
 }
 .cell-bar .cell-group span {
   border-left: 1px solid #fff;
@@ -3076,7 +3122,7 @@ footer .copylight.bg-gray2 {
 }
 .cell-bar .cell-group-bind.vertical .vertical-cell-group {
   width: 100%;
-  height: 30px;
+  height: 38px;
 }
 .cell-bar .cell-group-bind.vertical .vertical-cell-group ~ .vertical-cell-group {
   border-top: 1px solid #fff;
@@ -4383,6 +4429,21 @@ footer .copylight.bg-gray2 {
   }
   .congestion-noti-monitering .ly-content > article > .inner {
     padding-block: 8px;
+  }
+  .congestion-noti-monitering .ly-content .cell-container {
+    min-height: 300px;
+  }
+  .congestion-noti-monitering .ly-content .vms-list {
+    padding-top: 23.5px;
+  }
+  .congestion-noti-monitering .ly-content .vms-bind .vms-container {
+    padding-bottom: 11.5px;
+  }
+  .congestion-noti-monitering .ly-content .vms-state-container .inner {
+    padding-block: 16px;
+  }
+  .congestion-noti-monitering .ly-content .vms-realtime-container .inner {
+    margin-block: 18px;
   }
 }
 @media screen and (min-height: 969px) {

@@ -191,15 +191,18 @@
                   <!-- //cell-group-bind -->
 
                   <!-- ######## TG진입로 1~2차로 ######## -->
-                  <div class="cell-group-bind vertical" style="height: 60px">
-                    <div class="cell-group h30"></div>
-                    <div class="cell-group h30"></div>
+                  <!-- 240224 style속성 height값 변경 -->
+                  <div class="cell-group-bind vertical" style="height: 75px">
+                    <!-- 240224 클래스명 h36으로 변경 -->
+                    <div class="cell-group h36"></div>
+                    <div class="cell-group h36"></div>
                   </div>
                   <!-- //cell-group-bind -->
 
                   <!-- ######## TG진입로 1차로 ######## -->
                   <div class="cell-group-bind" style="flex: 0 0 1400px">
-                    <div class="cell-group h30"></div>
+                    <!-- 240224 클래스명 h36으로 변경 -->
+                    <div class="cell-group h36"></div>
                     <div class="none horizon-right" style="flex-basis: 865px">
                       <span class="txt">TG 진입로 및 감속차로</span>
                     </div>
@@ -241,209 +244,197 @@
             </article>
             <!-- //cell-container -->
 
-            <article class="vms-container">
-              <h2>VMS 현황</h2>
-              <div class="inner">
-                <ul class="vms-list">
-                  <li>
-                    <i>7</i>
-                    <div class="condition w-lg">
-                      <em>전방<br />진출로<br />혼잡</em>
-                    </div>
-                  </li>
-                  <li>
-                    <i>6</i>
-                    <div class="condition w-lg">
-                      <em>전방<br />진출로<br />혼잡</em>
-                    </div>
-                  </li>
-                  <li>
-                    <i>5</i>
-                    <div class="condition w-md">
-                      <em>전방<br />진출로<br />혼잡</em>
-                    </div>
-                  </li>
-                  <li>
-                    <i>4</i>
-                    <div class="condition w-md">
-                      <em>전방<br />진출로<br />혼잡</em>
-                    </div>
-                  </li>
-                  <li>
-                    <i>3</i>
-                    <div class="condition w-lg">
-                      <em>전방<br />진출로<br />혼잡</em>
-                    </div>
-                  </li>
-                  <li>
-                    <i>2</i>
-                    <div class="condition w-md">
-                      <em>전방<br />진출로<br />혼잡</em>
-                    </div>
-                  </li>
-                  <li>
+            <!-- 240224 이하 영역 전체 수정 -->
+            <div class="vms-bind">
+              <article class="vms-container">
+                <h2>VMS 현황</h2>
+                <div class="inner">
+                  <ul class="vms-list">
+                    <li>
+                      <i>7</i>
+                      <div class="condition w-lg">
+                        <em>전방<br />진출로<br />혼잡</em>
+                      </div>
+                    </li>
+                    <li>
+                      <i>6</i>
+                      <div class="condition w-lg">
+                        <em>전방<br />진출로<br />혼잡</em>
+                      </div>
+                    </li>
+                    <li>
+                      <i>5</i>
+                      <div class="condition w-md">
+                        <em>전방<br />진출로<br />혼잡</em>
+                      </div>
+                    </li>
+                    <li class="error">
+                      <i>4</i>
+                      <div class="condition w-md"></div>
+                      <button type="button" class="btn-vms-del"><span class="hidden">삭제하기</span></button>
+                    </li>
+                    <li>
+                      <i>3</i>
+                      <div class="condition w-md">
+                        <em>전방<br />진출로<br />혼잡</em>
+                      </div>
+                    </li>
+                    <li>
+                      <i>2</i>
+                      <div class="condition w-md">
+                        <em>전방<br />진출로<br />혼잡</em>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="vms-inline">
                     <i>1</i>
-                    <div class="condition w-inline">
+                    <div class="condition">
                       <em>850M 앞 2차로 정체 <span>온양 방향</span></em>
                     </div>
-                  </li>
-                </ul>
-                <ul class="vms-list type2">
-                  <li>
-                    <i>7</i>
-                    <div class="condition"></div>
-                  </li>
-                  <li>
-                    <i>6</i>
-                    <div class="condition"></div>
-                  </li>
-                  <li>
-                    <i>5</i>
-                    <div class="condition"></div>
-                  </li>
-                  <li>
-                    <i>4</i>
-                    <div class="condition"></div>
-                  </li>
-                  <li>
-                    <i>3</i>
-                    <div class="condition"></div>
-                  </li>
-                  <li>
-                    <i>2</i>
-                    <div class="condition"></div>
-                  </li>
-                  <li>
-                    <i>1</i>
-                    <div class="condition"></div>
-                  </li>
-                </ul>
-              </div>
-              <!-- //inner -->
-            </article>
-            <!-- //vms-container -->
+                  </div>
+                </div>
+                <!-- //inner -->
+              </article>
+              <!-- //vms-container -->
 
-            <article class="vms-state-container">
-              <div class="inner">
-                <table>
-                  <colgroup>
-                    <col style="width: 114px" />
-                    <col />
-                    <col />
-                    <col />
-                    <col />
-                    <col />
-                    <col />
-                    <col />
-                    <col />
-                    <col />
-                  </colgroup>
-                  <tbody>
-                    <tr>
-                      <th>지점</th>
-                      <td><i>9</i></td>
-                      <td><i>8</i></td>
-                      <td><i>7</i></td>
-                      <td><i>6</i></td>
-                      <td><i>5</i></td>
-                      <td><i>4</i></td>
-                      <td><i>3</i></td>
-                      <td><i>2</i></td>
-                      <td><i>1</i></td>
-                    </tr>
-                    <tr>
-                      <th>VMS</th>
-                      <td>
-                        <span class="none">-</span>
-                      </td>
-                      <td>
-                        <span class="none">-</span>
-                      </td>
-                      <td>
-                        <span>정상</span>
-                      </td>
-                      <td>
-                        <span>정상</span>
-                      </td>
-                      <td>
-                        <span>정상</span>
-                      </td>
-                      <td>
-                        <span>정상</span>
-                      </td>
-                      <td>
-                        <span>정상</span>
-                      </td>
-                      <td>
-                        <span>정상</span>
-                      </td>
-                      <td>
-                        <span>정상</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>CA 0 / CA1</th>
-                      <td>
-                        <div class="bind">
-                          <span>정상</span>
-                          <span class="negative">오류</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="bind">
-                          <span>정상</span>
-                          <span>정상</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="bind">
-                          <span>정상</span>
-                          <span>정상</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="bind">
-                          <span>정상</span>
-                          <span>정상</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="bind">
-                          <span>정상</span>
-                          <span>정상</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="bind">
-                          <span>정상</span>
-                          <span>정상</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="bind">
-                          <span>정상</span>
-                          <span>정상</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="bind">
-                          <span>정상</span>
-                          <span>정상</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="bind">
-                          <span>정상</span>
-                          <span>정상</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="vms-group">
+                <article class="vms-realtime-container">
+                  <h2>VMS 실시간 모니터링 화면</h2>
+                  <div class="inner">
+                    <video autoplay loop muted width="100%" height="100%">
+                      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </article>
+                <!-- //vms-realtime-container -->
+                <article class="vms-state-container">
+                  <div class="inner">
+                    <table>
+                      <colgroup>
+                        <col style="width: 30px" />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>지점</th>
+                          <td><i>9</i></td>
+                          <td><i>8</i></td>
+                          <td><i>7</i></td>
+                          <td><i>6</i></td>
+                          <td><i>5</i></td>
+                          <td><i>4</i></td>
+                          <td><i>3</i></td>
+                          <td><i>2</i></td>
+                          <td><i>1</i></td>
+                        </tr>
+                        <tr>
+                          <th>VMS</th>
+                          <td>
+                            <span class="none">-</span>
+                          </td>
+                          <td>
+                            <span class="none">-</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>CA0</th>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>CA1</th>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                          <td>
+                            <span>정상</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //inner -->
+                </article>
+                <!-- //vms-state-container -->
               </div>
-              <!-- //inner -->
-            </article>
-            <!-- //vms-state-container -->
+              <!-- //vms-group -->
+            </div>
+            <!-- //vms-bind -->
           </section>
           <!-- //ly-left -->
         </section>
