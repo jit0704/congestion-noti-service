@@ -2892,6 +2892,9 @@ footer .copylight.bg-gray2 {
   color: #f00;
   font-weight: 800;
 }
+.congestion-noti-monitering .ly-content .vms-list li .btn-vms-del {
+  display: none;
+}
 .congestion-noti-monitering .ly-content .vms-list li.error {
   background: transparent;
 }
@@ -2900,6 +2903,7 @@ footer .copylight.bg-gray2 {
   background-size: 79px 79px;
 }
 .congestion-noti-monitering .ly-content .vms-list li.error .btn-vms-del {
+  display: block;
   position: absolute;
   top: 14px;
   right: -12px;
@@ -2946,6 +2950,26 @@ footer .copylight.bg-gray2 {
 }
 .congestion-noti-monitering .ly-content .vms-inline .condition em span {
   color: #fff;
+}
+.congestion-noti-monitering .ly-content .vms-inline .btn-vms-del {
+  display: none;
+}
+.congestion-noti-monitering .ly-content .vms-inline.error {
+  background: transparent;
+}
+.congestion-noti-monitering .ly-content .vms-inline.error .condition {
+  background: url(/base/images/ic_none2.png) no-repeat 50% 45% #000;
+  background-size: 55px 55px;
+}
+.congestion-noti-monitering .ly-content .vms-inline.error .btn-vms-del {
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 758px;
+  width: 40px;
+  height: 40px;
+  background: url(/base/images/btn_close_special.png) no-repeat 2px 2px;
+  background-size: contain;
 }
 .congestion-noti-monitering .ly-content .vms-realtime-container {
   overflow: hidden;
