@@ -2645,7 +2645,6 @@ footer .copylight.bg-gray2 {
   font-size: 20px;
   color: #1e5f8d;
   font-weight: 800;
-  border-bottom: 1px solid #e3e3e3;
 }
 .congestion-noti-monitering .ly-content > article header {
   display: -webkit-box;
@@ -2661,10 +2660,6 @@ footer .copylight.bg-gray2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #e3e3e3;
-}
-.congestion-noti-monitering .ly-content > article header h2 {
-  border-bottom: 0;
 }
 .congestion-noti-monitering .ly-content > article header .state-legend {
   display: -webkit-box;
@@ -2819,13 +2814,12 @@ footer .copylight.bg-gray2 {
   font-size: 20px;
   color: #1e5f8d;
   font-weight: 800;
-  border-bottom: 1px solid #e3e3e3;
 }
 .congestion-noti-monitering .ly-content .vms-bind .vms-container {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1031px;
           flex: 0 0 1031px;
-  padding-bottom: 36.5px;
+  padding-bottom: 34px;
 }
 .congestion-noti-monitering .ly-content .vms-group {
   -webkit-box-flex: 1;
@@ -2843,16 +2837,20 @@ footer .copylight.bg-gray2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 36.5px 30px 15px;
+  padding: 15px 25px 10px;
+}
+.congestion-noti-monitering .ly-content .vms-list li {
+  width: 155px;
+  height: 255px;
+  padding: 10px 0 20px;
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
 }
 .congestion-noti-monitering .ly-content .vms-list li i {
-  width: 28px;
-  line-height: 28px;
-  text-align: center;
+  margin: 0 0 10px 15px;
+  line-height: 19px;
+  font-weight: 700;
   color: #59839e;
-  font-weight: 800;
-  border-radius: 5px 5px 0px 0px;
-  background: #d8eaf6;
 }
 .congestion-noti-monitering .ly-content .vms-list li .condition {
   display: -webkit-box;
@@ -2868,17 +2866,17 @@ footer .copylight.bg-gray2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 223px;
+  height: 197px;
+  margin: 0 auto;
+  font-size: 26px;
   text-align: center;
   background: #000;
 }
 .congestion-noti-monitering .ly-content .vms-list li .condition.w-lg {
-  width: 139px;
-  font-size: 26px;
+  width: 123px;
 }
 .congestion-noti-monitering .ly-content .vms-list li .condition.w-md {
-  width: 110px;
-  font-size: 22px;
+  width: 97px;
 }
 .congestion-noti-monitering .ly-content .vms-list li .condition.w-inline {
   width: 468px;
@@ -2905,24 +2903,26 @@ footer .copylight.bg-gray2 {
 .congestion-noti-monitering .ly-content .vms-list li.error .btn-vms-del {
   display: block;
   position: absolute;
-  top: 14px;
-  right: -12px;
+  top: 25px;
+  right: 15px;
   width: 40px;
   height: 40px;
   background: url(/base/images/btn_close_special.png) no-repeat 2px 2px;
   background-size: contain;
 }
 .congestion-noti-monitering .ly-content .vms-inline {
-  margin-left: 30px;
+  position: static;
+  width: 981px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
 }
 .congestion-noti-monitering .ly-content .vms-inline i {
-  width: 28px;
-  line-height: 28px;
-  text-align: center;
+  margin: 10px 0 10px 15px;
+  line-height: 19px;
+  font-weight: 700;
   color: #59839e;
-  font-weight: 800;
-  border-radius: 5px 5px 0px 0px;
-  background: #d8eaf6;
 }
 .congestion-noti-monitering .ly-content .vms-inline .condition {
   display: -webkit-box;
@@ -2938,8 +2938,10 @@ footer .copylight.bg-gray2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 787px;
-  height: 78px;
+  position: relative;
+  width: 730px;
+  height: 72px;
+  margin: 0 auto;
   text-align: center;
   background: #000;
 }
@@ -2961,11 +2963,11 @@ footer .copylight.bg-gray2 {
   background: url(/base/images/ic_none2.png) no-repeat 50% 45% #000;
   background-size: 55px 55px;
 }
-.congestion-noti-monitering .ly-content .vms-inline.error .btn-vms-del {
+.congestion-noti-monitering .ly-content .vms-inline.error .condition .btn-vms-del {
   display: block;
   position: absolute;
-  top: 14px;
-  left: 758px;
+  top: -15px;
+  right: -12px;
   width: 40px;
   height: 40px;
   background: url(/base/images/btn_close_special.png) no-repeat 2px 2px;
@@ -2983,7 +2985,7 @@ footer .copylight.bg-gray2 {
   margin-top: 10px;
 }
 .congestion-noti-monitering .ly-content .vms-state-container .inner {
-  padding: 25px 20.5px;
+  padding: 26px 20.5px;
 }
 .congestion-noti-monitering .ly-content .vms-state-container table th,
 .congestion-noti-monitering .ly-content .vms-state-container table td {
@@ -4458,13 +4460,13 @@ footer .copylight.bg-gray2 {
     min-height: 300px;
   }
   .congestion-noti-monitering .ly-content .vms-list {
-    padding-top: 23.5px;
+    padding-top: 4px;
   }
   .congestion-noti-monitering .ly-content .vms-bind .vms-container {
-    padding-bottom: 11.5px;
+    padding-bottom: 20px;
   }
   .congestion-noti-monitering .ly-content .vms-state-container .inner {
-    padding-block: 16px;
+    padding-block: 18px;
   }
   .congestion-noti-monitering .ly-content .vms-realtime-container .inner {
     margin-block: 18px;
