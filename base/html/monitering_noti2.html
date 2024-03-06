@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>모니터링</title>
+    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/base/js/common/includeHTML.js"></script>
+    <script type="text/javascript" src="/base/js/common/cell.js"></script>
+    <!-- 퍼블리싱 확인용 include -->
+    <script type="text/javascript" src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" include-html="/base/html/common/header.html"></header>
+      <!-- //header -->
+
+      <main class="container bg-nileblue">
+        <section class="congestion-noti-monitering">
+          <section class="ly-left" include-html="/base/html/common/monitering_noti_nav.html"></section>
+          <!-- //ly-left -->
+          <section class="ly-content radar-way-type">
+            <article class="cell-container">
+              <header>
+                <h2>셀 현황</h2>
+                <span class="state-legend">
+                  <em>소통원활</em>
+                  <em>서행</em>
+                  <em>정체</em>
+                </span>
+              </header>
+              <div class="inner">
+                <!-- 각 구간 너비는 width값으로 제어 -->
+                <section class="section-info">
+                  <div class="num9" style="width: 118px">
+                    <i>9</i>
+                    <span><em>165m</em></span>
+                  </div>
+                  <div class="num8" style="width: 116px">
+                    <i>8</i>
+                    <span><em>150m</em></span>
+                  </div>
+                  <div class="num7" style="width: 55px">
+                    <i>7</i>
+                    <span><em>75m</em></span>
+                  </div>
+                  <div class="num6" style="width: 186px">
+                    <i>6</i>
+                    <span><em>245m</em></span>
+                  </div>
+                  <div class="num5" style="width: 179px">
+                    <i>5</i>
+                    <span><em>235m</em></span>
+                  </div>
+                  <div class="num4" style="width: 135px">
+                    <i>4</i>
+                    <span><em>175m</em></span>
+                  </div>
+                  <div class="num3" style="width: 135px">
+                    <i>3</i>
+                    <span><em>185m</em></span>
+                  </div>
+                  <div class="num2" style="width: 111px">
+                    <i>2</i>
+                    <span><em>150m</em></span>
+                  </div>
+                  <div class="num1" style="width: 342px">
+                    <i>1</i>
+                    <span><em>450m</em></span>
+                  </div>
+                  <div class="blank"></div>
+                </section>
+
+                <div class="cell-bar h-auto ovh">
+                  <!-- ######## TG진입로 1~5차로 ######## -->
+                  <div class="cell-group-bind vertical" style="flex: 0 0 75px">
+                    <div class="vertical-cell-group sm">
+                      <div class="cell-bar">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //cell-bar -->
+                    </div>
+                    <!-- //vertical-cell-group -->
+                    <div class="vertical-cell-group">
+                      <div class="top">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //top -->
+                      <div class="bottom">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //bottom -->
+                    </div>
+                    <!-- //vertical-cell-group -->
+                    <div class="vertical-cell-group">
+                      <div class="top">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //top -->
+                      <div class="bottom">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //bottom -->
+                    </div>
+                    <!-- //vertical-cell-group -->
+                  </div>
+                  <!-- //cell-group-bind -->
+
+                  <!-- ######## TG진입로 1~2차로 ######## -->
+                  <div class="cell-group-bind vertical" style="height: 60px">
+                    <div class="cell-group h30"></div>
+                    <div class="cell-group h30"></div>
+                  </div>
+                  <!-- //cell-group-bind -->
+
+                  <!-- ######## TG진입로 1차로 ######## -->
+                  <div class="cell-group-bind" style="flex: 0 0 1400px">
+                    <div class="cell-group h30"></div>
+                    <div class="none horizon-right" style="flex-basis: 865px">
+                      <span class="txt">TG 진입로 및 감속차로</span>
+                    </div>
+                    <!-- //none -->
+                  </div>
+                  <!-- //cell-group-bind -->
+                </div>
+                <!-- //cell-bar -->
+
+                <!-- ##########################################################
+                  본선 2차로
+                ###############################################################  -->
+                <div class="cell-bar">
+                  <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
+                  <div class="none" style="flex-basis: 598px">
+                    <span class="txt">2차로</span>
+                  </div>
+                  <!-- //none -->
+                  <div class="cell-group" data-cell="road2"></div>
+                  <!-- //cell-group -->
+                </div>
+                <!-- //cell-bar -->
+
+                <!-- ##########################################################
+                  본선 1차로
+                ###############################################################  -->
+                <div class="cell-bar">
+                  <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
+                  <div class="none" style="flex-basis: 498px">
+                    <span class="txt">1차로</span>
+                  </div>
+                  <!-- //none -->
+                  <div class="cell-group" data-cell="road1"></div>
+                  <!-- //cell-group -->
+                </div>
+                <!-- //cell-bar -->
+              </div>
+              <!-- //inner -->
+            </article>
+            <!-- //cell-container -->
+
+            <article class="cell-container size2">
+              <h2>레이더 방향별 현황</h2>
+              <div class="inner">
+                <div class="cell-bar h-auto ovh">
+                  <!-- ######## TG진입로 1~5차로 ######## -->
+                  <div class="cell-group-bind vertical" style="flex: 0 0 63px">
+                    <div class="vertical-cell-group sm">
+                      <div class="cell-bar">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //cell-bar -->
+                    </div>
+                    <!-- //vertical-cell-group -->
+                    <div class="vertical-cell-group">
+                      <div class="top">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //top -->
+                      <div class="bottom">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //bottom -->
+                    </div>
+                    <!-- //vertical-cell-group -->
+                    <div class="vertical-cell-group">
+                      <div class="top">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //top -->
+                      <div class="bottom">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //bottom -->
+                    </div>
+                    <!-- //vertical-cell-group -->
+                  </div>
+                  <!-- //cell-group-bind -->
+
+                  <!-- ######## TG진입로 1~2차로 ######## -->
+                  <div class="cell-group-bind vertical" style="height: 46px">
+                    <div class="cell-group h23"></div>
+                    <div class="cell-group h23"></div>
+                  </div>
+                  <!-- //cell-group-bind -->
+
+                  <!-- ######## TG진입로 1차로 ######## -->
+                  <div class="cell-group-bind" style="flex: 0 0 1400px">
+                    <div class="cell-group h23"></div>
+                    <div class="none horizon-right" style="flex-basis: 865px">
+                      <span class="txt">TG 진입로 및 감속차로</span>
+                    </div>
+                    <!-- //none -->
+                  </div>
+                  <!-- //cell-group-bind -->
+                </div>
+                <!-- //cell-bar -->
+
+                <!-- ##########################################################
+                  본선 2차로
+                ###############################################################  -->
+                <div class="cell-bar">
+                  <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
+                  <div class="none" style="flex-basis: 598px">
+                    <span class="txt">2차로</span>
+                  </div>
+                  <!-- //none -->
+                  <div class="cell-group" data-cell="road2"></div>
+                  <!-- //cell-group -->
+                </div>
+                <!-- //cell-bar -->
+
+                <!-- ##########################################################
+                  본선 1차로
+                ###############################################################  -->
+                <div class="cell-bar">
+                  <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
+                  <div class="none" style="flex-basis: 498px">
+                    <span class="txt">1차로</span>
+                  </div>
+                  <!-- //none -->
+                  <div class="cell-group" data-cell="road1"></div>
+                  <!-- //cell-group -->
+                </div>
+                <!-- //cell-bar -->
+              </div>
+              <!-- //inner -->
+              <div class="inner">
+                <div class="cell-bar h-auto ovh">
+                  <!-- ######## TG진입로 1~5차로 ######## -->
+                  <div class="cell-group-bind vertical" style="flex: 0 0 63px">
+                    <div class="vertical-cell-group sm">
+                      <div class="cell-bar">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //cell-bar -->
+                    </div>
+                    <!-- //vertical-cell-group -->
+                    <div class="vertical-cell-group">
+                      <div class="top">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //top -->
+                      <div class="bottom">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //bottom -->
+                    </div>
+                    <!-- //vertical-cell-group -->
+                    <div class="vertical-cell-group">
+                      <div class="top">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //top -->
+                      <div class="bottom">
+                        <div class="cell-group"></div>
+                      </div>
+                      <!-- //bottom -->
+                    </div>
+                    <!-- //vertical-cell-group -->
+                  </div>
+                  <!-- //cell-group-bind -->
+
+                  <!-- ######## TG진입로 1~2차로 ######## -->
+                  <div class="cell-group-bind vertical" style="height: 46px">
+                    <div class="cell-group h23"></div>
+                    <div class="cell-group h23"></div>
+                  </div>
+                  <!-- //cell-group-bind -->
+
+                  <!-- ######## TG진입로 1차로 ######## -->
+                  <div class="cell-group-bind" style="flex: 0 0 1400px">
+                    <div class="cell-group h23"></div>
+                    <div class="none horizon-right" style="flex-basis: 865px">
+                      <span class="txt">TG 진입로 및 감속차로</span>
+                    </div>
+                    <!-- //none -->
+                  </div>
+                  <!-- //cell-group-bind -->
+                </div>
+                <!-- //cell-bar -->
+
+                <!-- ##########################################################
+                  본선 2차로
+                ###############################################################  -->
+                <div class="cell-bar">
+                  <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
+                  <div class="none" style="flex-basis: 598px">
+                    <span class="txt">2차로</span>
+                  </div>
+                  <!-- //none -->
+                  <div class="cell-group" data-cell="road2"></div>
+                  <!-- //cell-group -->
+                </div>
+                <!-- //cell-bar -->
+
+                <!-- ##########################################################
+                  본선 1차로
+                ###############################################################  -->
+                <div class="cell-bar">
+                  <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
+                  <div class="none" style="flex-basis: 498px">
+                    <span class="txt">1차로</span>
+                  </div>
+                  <!-- //none -->
+                  <div class="cell-group" data-cell="road1"></div>
+                  <!-- //cell-group -->
+                </div>
+                <!-- //cell-bar -->
+              </div>
+              <!-- //inner -->
+            </article>
+            <!-- //cell-container -->
+
+            <div class="vms-bind">
+              <article class="vms-container">
+                <div class="inner">
+                  <ul class="vms-list">
+                    <li class="w-lg">
+                      <i>7</i>
+                      <div class="condition">
+                        <em>전방<br />진출로<br />혼잡</em>
+                      </div>
+                    </li>
+                    <li class="w-lg">
+                      <i>6</i>
+                      <div class="condition">
+                        <em>전방<br />진출로<br />혼잡</em>
+                      </div>
+                    </li>
+                    <li class="w-md">
+                      <i>5</i>
+                      <div class="condition">
+                        <em>전방<br />진출로<br />혼잡</em>
+                      </div>
+                    </li>
+                    <li class="w-md error">
+                      <i>4</i>
+                      <div class="condition"></div>
+                      <button type="button" class="btn-vms-del"><span class="hidden">삭제하기</span></button>
+                    </li>
+                    <li class="w-md">
+                      <i>3</i>
+                      <div class="condition w-md">
+                        <em>전방<br />진출로<br />혼잡</em>
+                      </div>
+                    </li>
+                    <li class="w-md">
+                      <i>2</i>
+                      <div class="condition">
+                        <em>전방<br />진출로<br />혼잡</em>
+                      </div>
+                    </li>
+                    <li class="vms-inline error">
+                      <i>1</i>
+                      <div class="condition">
+                        <em>850M 앞 2차로 정체 <span>온양 방향</span></em>
+                        <button type="button" class="btn-vms-del"><span class="hidden">삭제하기</span></button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //inner -->
+              </article>
+              <!-- //vms-container -->
+
+              <article class="vms-state-container">
+                <div class="inner">
+                  <table>
+                    <colgroup>
+                      <col style="width: 30px" />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>지점</th>
+                        <td><i>9</i></td>
+                        <td><i>8</i></td>
+                        <td><i>7</i></td>
+                        <td><i>6</i></td>
+                        <td><i>5</i></td>
+                        <td><i>4</i></td>
+                        <td><i>3</i></td>
+                        <td><i>2</i></td>
+                        <td><i>1</i></td>
+                      </tr>
+                      <tr>
+                        <th>VMS</th>
+                        <td>
+                          <span class="none">-</span>
+                        </td>
+                        <td>
+                          <span class="none">-</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>CA0</th>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>CA1</th>
+                        <td>
+                          <span class="error">오류</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                        <td>
+                          <span>정상</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //inner -->
+              </article>
+              <!-- //vms-state-container -->
+            </div>
+            <!-- //vms-bind -->
+          </section>
+          <!-- //ly-left -->
+        </section>
+        <!-- //congestion-noti-monitering -->
+      </main>
+      <!-- //container -->
+
+      <footer include-html="/base/html/common/footer.html"></footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>

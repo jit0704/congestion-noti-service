@@ -2459,6 +2459,7 @@ footer .copylight.bg-gray2 {
 }
 
 /* 교통 정체 알림 화면 */
+/* 메인 */
 .congestion-noti-monitering {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2701,6 +2702,9 @@ footer .copylight.bg-gray2 {
 }
 .congestion-noti-monitering .ly-content .cell-container {
   min-height: 331px;
+}
+.congestion-noti-monitering .ly-content .cell-container.size2 .inner {
+  padding-top: 6px;
 }
 .congestion-noti-monitering .ly-content .cell-container .inner {
   position: relative;
@@ -3033,6 +3037,165 @@ footer .copylight.bg-gray2 {
 .congestion-noti-monitering .ly-content .vms-state-container table td > span.negative {
   color: #550a0a;
   background: #ee8989;
+}
+.congestion-noti-monitering .radar-way-type .cell-container {
+  min-height: 300px;
+}
+.congestion-noti-monitering .radar-way-type .cell-container .section-info {
+  height: 110px;
+}
+.congestion-noti-monitering .radar-way-type .cell-container.size2 .inner {
+  padding-bottom: 0;
+}
+.congestion-noti-monitering .radar-way-type .cell-container.size2 .inner ~ .inner {
+  padding-top: 10px;
+}
+.congestion-noti-monitering .radar-way-type .cell-container.size2 .inner ~ .inner::after {
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
+.congestion-noti-monitering .radar-way-type .cell-container.size2 .inner::after {
+  content: "";
+  position: absolute;
+  left: 200px;
+  bottom: 11px;
+  width: 97px;
+  height: 25px;
+  background: url(/base/images/ic_arr_right.png) no-repeat 0 0;
+  background-size: contain;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+.congestion-noti-monitering .radar-way-type .cell-container.size2 .cell-bar {
+  height: 23px;
+}
+.congestion-noti-monitering .radar-way-type .cell-container.size2 .cell-bar .cell-group.h23 {
+  height: 23px;
+}
+.congestion-noti-monitering .radar-way-type .cell-container.size2 .cell-bar .cell-group-bind.vertical .vertical-cell-group {
+  height: 23px;
+}
+.congestion-noti-monitering .radar-way-type .cell-container.size2 .cell-bar .cell-group-bind .vertical-cell-group.sm {
+  height: 11.5px;
+}
+.congestion-noti-monitering .radar-way-type .cell-container.size2 .cell-bar.h-auto {
+  height: auto;
+}
+.congestion-noti-monitering .radar-way-type .cell-container.size2 .cell-bar .none.horizon-right {
+  height: 23px;
+}
+.congestion-noti-monitering .radar-way-type .cell-bar {
+  height: 30px;
+}
+.congestion-noti-monitering .radar-way-type .cell-bar .cell-group.h30 {
+  height: 30px;
+}
+.congestion-noti-monitering .radar-way-type .cell-bar .cell-group-bind.vertical .vertical-cell-group {
+  height: 31px;
+}
+.congestion-noti-monitering .radar-way-type .cell-bar .cell-group-bind .vertical-cell-group.sm {
+  height: 15px;
+}
+.congestion-noti-monitering .radar-way-type .cell-bar.h-auto {
+  height: auto;
+}
+.congestion-noti-monitering .radar-way-type .cell-bar .none.horizon-right {
+  height: 30px;
+}
+.congestion-noti-monitering .radar-way-type .vms-bind {
+  gap: 0 10px;
+}
+.congestion-noti-monitering .radar-way-type .vms-bind .vms-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 25.75px 30px;
+}
+.congestion-noti-monitering .radar-way-type .vms-bind .vms-state-container {
+  width: 591px;
+  margin-top: 0;
+}
+.congestion-noti-monitering .radar-way-type .vms-bind .vms-state-container .inner {
+  padding: 25px;
+}
+.congestion-noti-monitering .radar-way-type .vms-bind .vms-state-container table td > span {
+  line-height: 38px;
+  font-weight: 700;
+}
+.congestion-noti-monitering .radar-way-type .vms-bind .vms-state-container table td .error {
+  color: #550a0a;
+  background: #ee8989;
+}
+.congestion-noti-monitering .radar-way-type .vms-list {
+  gap: 0 10px;
+  padding: 0;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li {
+  height: 160px;
+  padding: 6.5px 0 15px;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li.error .btn-vms-del {
+  top: 17px;
+  right: 0;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li.error .condition {
+  background-size: 70%;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li i {
+  margin: 0 0 6.5px 15px;
+  line-height: 16px;
+  font-size: 14px;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li.w-lg {
+  width: 101px;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li.w-lg .condition {
+  width: 71px;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li.w-md {
+  width: 87px;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li.w-md .condition {
+  width: 57px;
+  font-size: 18px;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li .condition {
+  height: 115px;
+  font-size: 19px;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li .condition em {
+  line-height: 24px;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li.vms-inline {
+  width: 281px;
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li.vms-inline .condition {
+  width: 251px;
+  background: transparent;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li.vms-inline .condition em {
+  padding: 0 14px;
+  letter-spacing: -1.5px;
+  line-height: 36px;
+  font-size: 18px;
+  background: #000;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li.vms-inline.error .condition em {
+  overflow: hidden;
+  width: 251px;
+  background: url(/base/images/ic_none2.png) no-repeat 50% 50% #000;
+  background-size: 10%;
+  text-indent: -999px;
+}
+.congestion-noti-monitering .radar-way-type .vms-list li.vms-inline.error .condition .btn-vms-del {
+  width: 30px;
+  height: 30px;
+  top: 27px;
+  right: -10px;
 }
 
 /* cell영역 컴포넌트 */
@@ -4470,6 +4633,13 @@ footer .copylight.bg-gray2 {
   }
   .congestion-noti-monitering .ly-content .vms-realtime-container .inner {
     margin-block: 18px;
+  }
+  .congestion-noti-monitering .ly-content.radar-way-type .vms-bind .vms-container {
+    padding-block: 10px;
+  }
+  .congestion-noti-monitering .ly-content.radar-way-type .vms-bind .vms-state-container .inner {
+    padding-top: 14px;
+    padding-bottom: 10px;
   }
 }
 @media screen and (min-height: 969px) {
