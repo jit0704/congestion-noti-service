@@ -22,9 +22,9 @@ html {
 body {
   height: 100%;
   color: #000;
-  font-family: "Nanum Gothic", "맑은 고딕", "돋음", sans-serif;
+  font-family: Pretendard, "Nanum Gothic", "맑은 고딕", "돋음", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   background: #fff;
 }
 
@@ -33,7 +33,7 @@ input, select, textarea, button {
   outline: 0;
   background: transparent;
   color: #000;
-  font-family: "Nanum Gothic", "맑은 고딕", "돋음", sans-serif;
+  font-family: Pretendard, "Nanum Gothic", "맑은 고딕", "돋음", sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
@@ -149,6 +149,63 @@ a, span, em, button, label, i, b, strong {
   font-style: normal;
   font-weight: 800;
   src: local("NanumGothic ExtraBold"), local("NanumGothic-ExtraBold"), url(/base/font/nanum-gothic-v17-latin-800.woff2) format("woff2");
+}
+/* ###############################
+    웹폰트 Pretendard
+################################## */
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: fallback;
+  src: local("Pretendard Black"), url("/base/font/Pretendard-Black.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: fallback;
+  src: local("Pretendard ExtraBold"), url("/base/font/Pretendard-ExtraBold.woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: fallback;
+  src: local("Pretendard Bold"), url("/base/font/Pretendard-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: fallback;
+  src: local("Pretendard SemiBold"), url("/base/font/Pretendard-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: fallback;
+  src: local("Pretendard Medium"), url("/base/font/Pretendard-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: fallback;
+  src: local("Pretendard Regular"), url("/base/font/Pretendard-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: fallback;
+  src: local("Pretendard Light"), url("/base/font/Pretendard-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: fallback;
+  src: local("Pretendard ExtraLight"), url("/base/font/Pretendard-ExtraLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: fallback;
+  src: local("Pretendard Thin"), url("/base/font/Pretendard-Thin.woff2") format("woff2");
 }
 /* ###############################
     help class
@@ -626,6 +683,11 @@ footer .copylight.bg-gray2 {
   padding: 0;
   border-radius: 5px;
 }
+.modal .log {
+  width: 1400px;
+  padding: 0;
+  border-radius: 5px;
+}
 .modal a.close-modal {
   top: 12px;
   right: 12px;
@@ -830,6 +892,15 @@ footer .copylight.bg-gray2 {
 }
 .gnb li.add > a::before {
   background-image: url(/base/images/ic_doc.png);
+}
+.gnb li.vms > a::before {
+  background-image: url(/base/images/ic_hull.png);
+}
+.gnb li.history > a::before {
+  background-image: url(/base/images/ic_doc.png);
+}
+.gnb li.log > a::before {
+  background-image: url(/base/images/btn_save.png);
 }
 .gnb li.hull > a::before {
   width: 26px;
@@ -2900,10 +2971,6 @@ footer .copylight.bg-gray2 {
 .congestion-noti-monitering .ly-content .vms-list li.error {
   background: transparent;
 }
-.congestion-noti-monitering .ly-content .vms-list li.error .condition {
-  background: url(/base/images/ic_none2.png) no-repeat 50% 50% #000;
-  background-size: 79px 79px;
-}
 .congestion-noti-monitering .ly-content .vms-list li.error .btn-vms-del {
   display: block;
   position: absolute;
@@ -3187,7 +3254,6 @@ footer .copylight.bg-gray2 {
 .congestion-noti-monitering .radar-way-type .vms-list li.vms-inline.error .condition em {
   overflow: hidden;
   width: 251px;
-  background: url(/base/images/ic_none2.png) no-repeat 50% 50% #000;
   background-size: 10%;
   text-indent: -999px;
 }
@@ -3242,7 +3308,7 @@ footer .copylight.bg-gray2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-inline: 10px;
+  padding-inline: 20px;
   background: #ececec;
 }
 .cell-bar .none.horizon-right {
@@ -3277,16 +3343,33 @@ footer .copylight.bg-gray2 {
   height: 36px;
 }
 .cell-bar .cell-group span {
+  font-size: 11px;
+  font-weight: bold;
+  color: #08481A;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-left: 1px solid #fff;
   background: #00c337;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 .cell-bar .cell-group span.slow {
+  color: #585858;
   background: #ffee59;
 }
 .cell-bar .cell-group span.cong {
+  color: white;
   background: #c20000;
+}
+.cell-bar .cell-group span.shadow {
+  background: #989595;
 }
 .cell-bar .cell-group-bind {
   -webkit-box-flex: 1;
@@ -4431,8 +4514,9 @@ footer .copylight.bg-gray2 {
 
 /* 로그 팝업 */
 .log.modal-primary {
-  width: 970px;
+  width: 1440px;
   padding: 0;
+  font-size: 14px;
 }
 .log.modal-primary .tab-content {
   display: none;
@@ -4818,4 +4902,582 @@ footer .copylight.bg-gray2 {
   top: 0;
   right: 0;
   bottom: 0;
+}
+
+/* CA 관리 */
+.ca-manage .tbl-list-header {
+  margin-top: 0;
+}
+
+.ca-manage .tbl-list-header h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+.ca-manage .tbl-list-header .btn-default + .btn-default {
+  margin-left: 10px;
+}
+
+.ca-manage.list-division .ly-left {
+  width: 1000px;
+}
+
+.ca-manage.list-division .ly-left .tbl-sticky {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  height: calc(100% - 58px);
+}
+
+.ca-manage.list-division .ly-left .tbl-sticky-inner {
+  height: calc(100vh - 211px);
+  min-height: 100%;
+}
+
+.ca-manage.list-division .ly-left .tbl-sticky-inner td {
+  cursor: pointer;
+}
+
+.ca-manage.list-division .ly-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: calc(100% - 1020px);
+  margin-left: 20px;
+}
+
+.ca-manage.list-division .ly-right .tbl-list-header {
+  margin-bottom: 15px;
+}
+
+.ca-manage.list-division .ly-right .tbl-border-none {
+  position: relative;
+  height: 100%;
+  padding: 15px 20px 73px 0;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+.ca-manage.list-division .ly-right.fac .tbl-border-none {
+  position: relative;
+  height: 100%;
+  padding: 15px 20px 53px 0;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+.ca-manage.list-division .ly-right .tbl-border-none th {
+  height: 48px;
+  padding-left: 24px;
+  font-weight: 700;
+}
+
+.ca-manage.list-division .ly-right .tbl-border-none td {
+  height: 48px;
+  padding: 5px 0;
+}
+
+.ca-manage.list-division .ly-right .tbl-border-none td .selectbox {
+  background-position-x: 97%;
+}
+
+.ca-manage.list-division .ly-right .tbl-border-none td .input-value-group i {
+  margin-top: 0;
+}
+
+.ca-manage.list-division .ly-right .tbl-border-none .btn-block {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 15px;
+  width: calc(100% - 40px);
+}
+
+.ca-manage.container.bg-white {
+  overflow-y: auto;
+  padding: 4px 30px;
+}
+
+/* VMS 현황 영상 */
+.split-video {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+/* 셀 현황 */
+.cell-tab-nav {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex-start;
+          flex-direction: flex-start;
+  border: 1px solid #d0d0d0;
+  border-radius: 3px;
+}
+
+.cell-tab-nav a {
+  min-width: 100px;
+  line-height: 31px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #727272;
+}
+
+.cell-tab-nav a.active {
+  color: #fff;
+  font-weight: 600;
+  background: #5285aa;
+}
+
+.cell-tab-nav a:not(:first-child) {
+  border-left: 1px solid #d0d0d0;
+}
+
+/* 돌발 이력 관리 */
+[data-componant=setup] .tbl-sticky-inner.icdt {
+  height: calc(100vh - 280px);
+}
+
+/* 레이더 셀 원시 이력 관리 */
+[data-componant=setup] .tbl-sticky-inner.cell {
+  height: calc(100vh - 350px);
+}
+
+/* 서비스 상태 관리 */
+[data-componant=setup] .tbl-sticky-inner.svc-stts {
+  height: calc(100vh - 380px);
+}
+
+/* 지점 상태 관리 */
+[data-componant=setup] .tbl-sticky-inner.ctrl-stts {
+  height: calc(100vh - 280px);
+}
+
+/* vms 상태 관리 */
+[data-componant=setup] .tbl-sticky-inner.vms-stts {
+  height: calc(100vh - 280px);
+}
+
+/*맵 줌슬라이더, 줌인/줌아웃 버튼*/
+#map1 .ol-zoom {
+  top: 20em;
+  left: 0.5em;
+  position: relative;
+  float: right;
+  left: -16px;
+}
+
+#map1 .ol-viewport .ol-zoom .ol-zoom-in {
+  display: block;
+  margin-top: 204px;
+  background-color: black;
+}
+
+#map1 .ol-viewport .ol-zoom .ol-zoom-out {
+  display: block;
+  margin-top: 204px;
+  background-color: black;
+}
+
+#map1 .ol-zoomslider {
+  background-color: transparent;
+  top: 34.4em;
+  position: relative;
+  float: right;
+  left: 15px;
+}
+
+#map1 .ol-zoomslider-thumb {
+  background-color: black;
+}
+
+#map1 .ol-touch .ol-zoom .ol-zoom-out {
+  margin-top: 212px;
+}
+
+#map1 .ol-touch .ol-zoomslider {
+  top: 2.75em;
+}
+
+#map1 .ol-zoom-in.ol-has-tooltip:hover [role=tooltip],
+#map1 .ol-zoom-in.ol-has-tooltip:focus [role=tooltip] {
+  top: 3px;
+}
+
+#map1 .ol-zoom-out.ol-has-tooltip:hover [role=tooltip],
+#map1 .ol-zoom-out.ol-has-tooltip:focus [role=tooltip] {
+  top: 232px;
+}
+
+/* 지도에서 사용하는 UI */
+.map-iconbar-container {
+  position: absolute;
+  top: 2rem;
+  z-index: 4;
+  /*   width: 4.2rem; */
+  width: 42px;
+  height: 42px;
+}
+
+.map-iconbar-container.pos-right1 {
+  right: 2rem;
+}
+
+.map-iconbar-container.pos-right2 {
+  right: 6.7rem;
+}
+
+.map-iconbar-container.pos-right3 {
+  right: 11.4rem;
+}
+
+.map-iconbar-container.open .map-icon-list {
+  display: block;
+}
+
+.map-iconbar-container.open .btn-display span {
+  background-color: #ebf8ff;
+  background-image: url(/base/images/map-right-iconbar/icon_map_hover2.png);
+}
+
+.map-iconbar-container.open:not(.map-selection) .btn-display span:hover {
+  background-image: url(/base/images/map-right-iconbar/icon_map_hover2.png);
+}
+
+.map-iconbar-container button {
+  display: block;
+  width: 100%;
+  /*   height: 4.2rem; */
+  padding: 0.3rem;
+  height: 42px;
+}
+
+.map-iconbar-container button span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3rem;
+}
+
+.map-iconbar-container button em {
+  margin-top: 0.2rem;
+}
+
+.map-iconbar-container .btn-display {
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+}
+
+.map-iconbar-container .btn-display span {
+  background-image: url(/base/images/map-right-iconbar/icon_map.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /*   background-size: 2.2rem 2.1rem; */
+  background-size: 1.6rem 1.5rem;
+}
+
+.map-iconbar-container .btn-display span:hover {
+  background-image: url(/base/images/map-right-iconbar/icon_map_hover.png);
+}
+
+.map-iconbar-container:not(.map-selection) .btn-display[class*=ic] span {
+  background-image: url(/base/images/map-right-iconbar/icon_map_hover2.png);
+  background-color: #ebf8ff;
+}
+
+.map-iconbar-container .map-icon-list {
+  display: none;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
+.map-iconbar-container .map-icon-list button span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.map-iconbar-container .map-icon-list button span::before {
+  content: "";
+}
+
+.map-iconbar-container .map-icon-list button em {
+  margin-top: 0.2rem;
+  color: #727272;
+  /*   font-size: 1rem; */
+  font-size: 0.5rem;
+  font-weight: 500;
+}
+
+.map-iconbar-container .map-icon-list button:hover em {
+  color: #03a0fc;
+}
+
+.map-iconbar-container .map-icon-list .ic1 span::before {
+  width: 1rem;
+  height: 1.8rem;
+  background-image: url("/base/images/map-right-iconbar/iconbar1.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.map-iconbar-container .map-icon-list .ic1.active span {
+  background-color: #ebf8ff;
+}
+
+.map-iconbar-container .map-icon-list .ic1.active span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar1_hover.png);
+}
+
+.map-iconbar-container .map-icon-list .ic1.active span em {
+  color: #03a0fc;
+}
+
+.map-iconbar-container .map-icon-list .ic1:hover span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar1_hover.png);
+}
+
+.map-iconbar-container .map-icon-list .ic2 span::before {
+  width: 1.4rem;
+  height: 1.65rem;
+  background-image: url("/base/images/map-right-iconbar/iconbar2.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.map-iconbar-container .map-icon-list .ic2.active span {
+  background-color: #ebf8ff;
+}
+
+.map-iconbar-container .map-icon-list .ic2.active span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar2_hover.png);
+}
+
+.map-iconbar-container .map-icon-list .ic2.active span em {
+  color: #03a0fc;
+}
+
+.map-iconbar-container .map-icon-list .ic2:hover span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar2_hover.png);
+}
+
+.map-iconbar-container .map-icon-list .ic3 span::before {
+  width: 1.6rem;
+  height: 1.3rem;
+  background-image: url("/base/images/map-right-iconbar/iconbar3.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.map-iconbar-container .map-icon-list .ic3.active span {
+  background-color: #ebf8ff;
+}
+
+.map-iconbar-container .map-icon-list .ic3.active span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar3_hover.png);
+}
+
+.map-iconbar-container .map-icon-list .ic3.active span em {
+  color: #03a0fc;
+}
+
+.map-iconbar-container .map-icon-list .ic3:hover span::before {
+  background-image: url(/base/images/map-right-iconbar/iconbar3_hover.png);
+}
+
+.map-iconbar-container .map-icon-list .ic4 span::before {
+  width: 1.2rem;
+  height: 2rem;
+  background-image: url("/base/images/map-right-iconbar/map_selection1.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.map-iconbar-container .map-icon-list .ic4.active span {
+  background-color: #ebf8ff;
+}
+
+.map-iconbar-container .map-icon-list .ic4.active span::before {
+  background-image: url(/base/images/map-right-iconbar/map_selection1_hover.png);
+}
+
+.map-iconbar-container .map-icon-list .ic4.active span em {
+  color: #03a0fc;
+}
+
+.map-iconbar-container .map-icon-list .ic4:hover span::before {
+  background-image: url(/base/images/map-right-iconbar/map_selection1_hover.png);
+}
+
+.screen-out {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 돌발 이력 관리 */
+.icdtHsty-manage .tbl-list-header {
+  margin-top: 0;
+}
+
+.icdtHsty-manage .tbl-list-header h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+.icdtHsty-manage .tbl-list-header .btn-default + .btn-default {
+  margin-left: 10px;
+}
+
+.icdtHsty-manage.list-division .ly-left {
+  width: 2600px;
+  height: calc(100% - 130px);
+}
+
+.icdtHsty-manage.list-division .ly-left .tbl-sticky {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.icdtHsty-manage.list-division .ly-left .tbl-sticky-inner {
+  height: calc(100vh - 245px);
+  min-height: 100%;
+}
+
+.icdtHsty-manage.list-division .ly-left .tbl-sticky-inner td {
+  cursor: pointer;
+}
+
+.icdtHsty-manage.list-division .ly-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: calc(100% - 1020px);
+  margin-top: 93px;
+  margin-left: 20px;
+}
+
+.icdtHsty-manage.list-division .ly-right .tbl-list-header {
+  margin-bottom: 15px;
+}
+
+.icdtHsty-manage.list-division .ly-right .tbl-border-none {
+  position: relative;
+  height: 100%;
+  padding: 15px 20px 20px 0;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+.icdtHsty-manage.list-division .ly-right.fac .tbl-border-none {
+  position: relative;
+  height: 100%;
+  padding: 15px 20px 53px 0;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+.icdtHsty-manage.list-division .ly-right .tbl-border-none th {
+  height: 48px;
+  padding-left: 24px;
+  font-weight: 700;
+}
+
+.icdtHsty-manage.list-division .ly-right .tbl-border-none td not:show {
+  height: 48px;
+  padding: 5px 0;
+}
+
+.icdtHsty-manage.list-division .ly-right .tbl-border-none td .selectbox {
+  background-position-x: 97%;
+}
+
+.icdtHsty-manage.list-division .ly-right .tbl-border-none td .input-value-group i {
+  margin-top: 0;
+}
+
+.icdtHsty-manage.list-division .ly-right .tbl-border-none .btn-block {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 15px;
+  width: calc(100% - 40px);
+}
+
+.icdtHsty-manage.container.bg-white {
+  overflow-y: auto;
+  padding: 4px 30px;
+}
+
+.icdtHsty-manage textarea {
+  width: 100%;
+  height: 6.25em;
+  border: none;
+  resize: none;
+}
+
+.icdtHsty-manage .show {
+  width: 100%;
+  height: 200%;
+  padding: 15px 15px 15px 30px;
+  margin-top: 330px;
+  margin-left: 30px;
 }
