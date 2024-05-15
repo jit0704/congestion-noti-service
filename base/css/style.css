@@ -23,7 +23,7 @@ body {
   height: 100%;
   color: #000;
   font-family: Pretendard, "Nanum Gothic", "맑은 고딕", "돋음", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
   background: #fff;
 }
@@ -823,6 +823,7 @@ footer .copylight.bg-gray2 {
 
 .greeting {
   color: #fff;
+  font-size: 16px;
 }
 .greeting em {
   color: #f89938;
@@ -903,9 +904,6 @@ footer .copylight.bg-gray2 {
   background-image: url(/base/images/btn_save.png);
 }
 .gnb li.hull > a::before {
-  width: 26px;
-  height: 26px;
-  vertical-align: top;
   background-image: url(/base/images/ic_hull.png);
 }
 .gnb li.hull.type2 > a::before {
@@ -1416,8 +1414,7 @@ footer .copylight.bg-gray2 {
 }
 .btn-logout {
   padding-left: 36px;
-  font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
 }
 .btn-save {
@@ -2713,10 +2710,10 @@ footer .copylight.bg-gray2 {
           box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
 }
 .congestion-noti-monitering .ly-content > article h2 {
-  padding: 9px 15px;
+  padding: 16px 25px 4px;
   font-size: 20px;
   color: #1e5f8d;
-  font-weight: 800;
+  font-weight: 700;
 }
 .congestion-noti-monitering .ly-content > article header {
   display: -webkit-box;
@@ -2754,7 +2751,7 @@ footer .copylight.bg-gray2 {
   padding: 3px 0 4px;
   text-align: center;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .congestion-noti-monitering .ly-content > article header .state-legend em:nth-child(1) {
   color: #fff;
@@ -2793,15 +2790,47 @@ footer .copylight.bg-gray2 {
       -ms-flex-pack: start;
           justify-content: flex-start;
   position: absolute;
-  top: 21px;
+  top: 35px;
   left: 24.5px;
   right: 24.5px;
   height: 120px;
   padding-bottom: 8px;
 }
+.congestion-noti-monitering .ly-content .cell-container .inner .section-info .num9 {
+  height: 73px;
+}
 .congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] {
   position: relative;
   border-right: 2px solid #193d56;
+}
+.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] .btn-camera-bind {
+  position: absolute;
+  top: -26px;
+  right: -22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0 2px;
+}
+.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] .btn-camera-bind button {
+  width: 22px;
+  height: 22px;
+  background: url(/base/images/ic_camera_bilateral.png) no-repeat 0 0;
+  background-size: contain;
+}
+.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] .btn-camera-bind button:hover, .congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] .btn-camera-bind button.active {
+  background-image: url(/base/images/ic_camera_bilateral_active.png);
+}
+.congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] .btn-camera-bind button:last-child {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 .congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] i {
   position: absolute;
@@ -2812,8 +2841,8 @@ footer .copylight.bg-gray2 {
   text-align: center;
   color: #fff;
   font-size: 18px;
-  font-weight: 700;
-  border-radius: 999px;
+  font-weight: 600;
+  border-radius: 4px;
   background: #193d56;
 }
 .congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] span {
@@ -2831,7 +2860,7 @@ footer .copylight.bg-gray2 {
   line-height: 17px;
   text-align: center;
   font-size: 14px;
-  color: #b1b1b1;
+  color: #8d8d8d;
 }
 .congestion-noti-monitering .ly-content .cell-container .inner .section-info [class*=num] span em {
   background: #fff;
@@ -2885,10 +2914,10 @@ footer .copylight.bg-gray2 {
           box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.05);
 }
 .congestion-noti-monitering .ly-content .vms-bind article h2 {
-  padding: 9px 15px;
+  padding: 16px 25px 4px;
   font-size: 20px;
   color: #1e5f8d;
-  font-weight: 800;
+  font-weight: 700;
 }
 .congestion-noti-monitering .ly-content .vms-bind .vms-container {
   -webkit-box-flex: 0;
@@ -2970,6 +2999,13 @@ footer .copylight.bg-gray2 {
 }
 .congestion-noti-monitering .ly-content .vms-list li.error {
   background: transparent;
+}
+.congestion-noti-monitering .ly-content .vms-list li.error.type2 .btn-vms-del {
+  right: 2px;
+}
+.congestion-noti-monitering .ly-content .vms-list li.error .condition {
+  background: url(/base/images/ic_none2.png) no-repeat 50% 50% #000;
+  background-size: 79px 79px;
 }
 .congestion-noti-monitering .ly-content .vms-list li.error .btn-vms-del {
   display: block;
@@ -3108,8 +3144,8 @@ footer .copylight.bg-gray2 {
 .congestion-noti-monitering .radar-way-type .cell-container {
   min-height: 300px;
 }
-.congestion-noti-monitering .radar-way-type .cell-container .section-info {
-  height: 110px;
+.congestion-noti-monitering .radar-way-type .cell-container .inner .section-info {
+  top: 21px;
 }
 .congestion-noti-monitering .radar-way-type .cell-container.size2 .inner {
   padding-bottom: 0;
@@ -3160,7 +3196,7 @@ footer .copylight.bg-gray2 {
   height: 30px;
 }
 .congestion-noti-monitering .radar-way-type .cell-bar .cell-group-bind.vertical .vertical-cell-group {
-  height: 31px;
+  height: 30px;
 }
 .congestion-noti-monitering .radar-way-type .cell-bar .cell-group-bind .vertical-cell-group.sm {
   height: 15px;
@@ -3263,6 +3299,14 @@ footer .copylight.bg-gray2 {
   top: 27px;
   right: -10px;
 }
+.congestion-noti-monitering.cell-distance-50m .cell-container .inner .section-info {
+  top: 30px;
+}
+.congestion-noti-monitering.cell-distance-50m .cell-bar .none {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 
 /* cell영역 컴포넌트 */
 .cell-bar {
@@ -3320,7 +3364,7 @@ footer .copylight.bg-gray2 {
 .cell-bar .none .txt {
   font-size: 14px;
   color: #808080;
-  font-weight: 700;
+  font-weight: 500;
 }
 .cell-bar .cell-group {
   -webkit-box-flex: 1;
@@ -3394,13 +3438,13 @@ footer .copylight.bg-gray2 {
 }
 .cell-bar .cell-group-bind.vertical .vertical-cell-group {
   width: 100%;
-  height: 38px;
+  height: 36px;
 }
 .cell-bar .cell-group-bind.vertical .vertical-cell-group ~ .vertical-cell-group {
-  border-top: 1px solid #fff;
+  margin-top: 1px;
 }
-.cell-bar .cell-group-bind.vertical > .cell-group:not(:first-child) {
-  border-top: 1px solid #fff;
+.cell-bar .cell-group-bind.vertical > .cell-group:not(:last-child) {
+  margin-bottom: 1px;
 }
 .cell-bar .cell-group-bind .vertical-cell-group {
   -webkit-box-flex: 0;

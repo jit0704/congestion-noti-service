@@ -8,7 +8,7 @@
     <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
     <script type="text/javascript" src="/base/js/common/includeHTML.js"></script>
-    <script type="text/javascript" src="/base/js/common/cell.js"></script>
+    <script type="text/javascript" src="/base/js/common/cell2.js"></script>
     <!-- 퍼블리싱 확인용 include -->
     <script type="text/javascript" src="/base/js/common/ui.js"></script>
     <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
@@ -20,7 +20,8 @@
       <!-- //header -->
 
       <main class="container bg-nileblue">
-        <section class="congestion-noti-monitering">
+        <!-- 240512: cell-distance-50m 클래스명 추가 -->
+        <section class="congestion-noti-monitering cell-distance-50m">
           <section class="ly-left" include-html="/base/html/common/monitering_noti_nav.html"></section>
           <!-- //ly-left -->
           <section class="ly-content">
@@ -117,7 +118,7 @@
                 <div class="cell-bar h-auto ovh">
                   <!-- ######## TG진입로 1~5차로 ######## -->
                   <!-- 240512 style속성 삭제 -->
-                  <div class="cell-group-bind vertical">
+                  <div class="cell-group-bind vertical" style="flex: 0 0 112.68px;">
                     <div class="vertical-cell-group sm">
                       <div class="cell-bar">
                         <div class="cell-group"></div>
@@ -152,7 +153,7 @@
 
                   <!-- ######## TG진입로 1~2차로 ######## -->
                   <!-- 240512 style속성 height값 변경 -->
-                  <div class="cell-group-bind vertical" style="height: 73px">
+                  <div class="cell-group-bind vertical" style="height: 73px;flex: 0 0 37.57px;">
                     <!-- 240224 클래스명 h36으로 변경 -->
                     <div class="cell-group h36"></div>
                     <div class="cell-group h36"></div>
@@ -160,10 +161,10 @@
                   <!-- //cell-group-bind -->
 
                   <!-- ######## TG진입로 1차로 ######## -->
-                  <div class="cell-group-bind" style="flex: 0 0 1400px">
+                  <div class="cell-group-bind" style="flex: 0 0 calc(100% - 37px - 150.24px)">
                     <!-- 240224 클래스명 h36으로 변경 -->
-                    <div class="cell-group h36"></div>
-                    <div class="none horizon-right" style="flex-basis: 865px">
+                    <div class="cell-group h36" style="flex: 0 0 413.16px"></div>
+                    <div class="none horizon-right">
                       <span class="txt">TG 진입로 및 감속차로</span>
                     </div>
                     <!-- //none -->
@@ -176,12 +177,12 @@
                   본선 2차로
                 ###############################################################  -->
                 <div class="cell-bar">
-                  <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
-                  <div class="none" style="flex-basis: 598px">
+                  <!-- 240512: cell이 없는 영역의 너비에 style 속성 삭제 -->
+                  <div class="none">
                     <span class="txt">2차로</span>
                   </div>
                   <!-- //none -->
-                  <div class="cell-group" data-cell="road2"></div>
+                  <div class="cell-group" data-cell="road2" style="flex: 0 0 1051.68px"></div>
                   <!-- //cell-group -->
                 </div>
                 <!-- //cell-bar -->
@@ -190,12 +191,12 @@
                   본선 1차로
                 ###############################################################  -->
                 <div class="cell-bar">
-                  <!-- cell이 없는 영역의 너비는 flex-basis 속성 값으로 제어 -->
-                  <div class="none" style="flex-basis: 498px">
+                  <!-- 240512: cell이 없는 영역의 너비에 style 속성 삭제-->
+                  <div class="none">
                     <span class="txt">1차로</span>
                   </div>
                   <!-- //none -->
-                  <div class="cell-group" data-cell="road1"></div>
+                  <div class="cell-group" data-cell="road1" style="flex: 0 0 1051.68px"></div>
                   <!-- //cell-group -->
                 </div>
                 <!-- //cell-bar -->
@@ -204,205 +205,6 @@
             </article>
             <!-- //cell-container -->
 
-            <!-- 240224 이하 영역 전체 수정 -->
-            <div class="vms-bind">
-              <article class="vms-container">
-                <h2>VMS 현황</h2>
-                <div class="inner">
-                  <ul class="vms-list">
-                    <!-- 240512 type2 클래스 추가 -->
-                    <li class="type2">
-                      <i>7</i>
-                      <div class="condition w-lg">
-                        <em>전방<br />진출로<br />혼잡</em>
-                      </div>
-                      <button type="button" class="btn-vms-del"><span class="hidden">삭제하기</span></button>
-                    </li>
-                    <li class="type2">
-                      <i>6</i>
-                      <div class="condition w-lg">
-                        <em>전방<br />진출로<br />혼잡</em>
-                      </div>
-                      <button type="button" class="btn-vms-del"><span class="hidden">삭제하기</span></button>
-                    </li>
-                    <li>
-                      <i>5</i>
-                      <div class="condition w-md">
-                        <em>전방<br />진출로<br />혼잡</em>
-                      </div>
-                      <button type="button" class="btn-vms-del"><span class="hidden">삭제하기</span></button>
-                    </li>
-                    <li class="error">
-                      <i>4</i>
-                      <div class="condition w-md"></div>
-                      <button type="button" class="btn-vms-del"><span class="hidden">삭제하기</span></button>
-                    </li>
-                    <li>
-                      <i>3</i>
-                      <div class="condition w-md">
-                        <em>전방<br />진출로<br />혼잡</em>
-                      </div>
-                      <button type="button" class="btn-vms-del"><span class="hidden">삭제하기</span></button>
-                    </li>
-                    <li>
-                      <i>2</i>
-                      <div class="condition w-md">
-                        <em>전방<br />진출로<br />혼잡</em>
-                      </div>
-                      <button type="button" class="btn-vms-del"><span class="hidden">삭제하기</span></button>
-                    </li>
-                  </ul>
-                  <div class="vms-inline error">
-                    <i>1</i>
-                    <div class="condition">
-                      <!-- <em>850M 앞 2차로 정체 <span>온양 방향</span></em> -->
-                      <!-- 240228 삭제 버튼 위치 이동 -->
-                      <button type="button" class="btn-vms-del"><span class="hidden">삭제하기</span></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- //inner -->
-              </article>
-              <!-- //vms-container -->
-
-              <div class="vms-group">
-                <article class="vms-realtime-container">
-                  <h2>VMS 실시간 모니터링 화면</h2>
-                  <div class="inner">
-                    <video autoplay loop muted width="100%" height="100%">
-                      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                </article>
-                <!-- //vms-realtime-container -->
-                <article class="vms-state-container">
-                  <div class="inner">
-                    <table>
-                      <colgroup>
-                        <col style="width: 30px" />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                      </colgroup>
-                      <tbody>
-                        <tr>
-                          <th>지점</th>
-                          <td><i>9</i></td>
-                          <td><i>8</i></td>
-                          <td><i>7</i></td>
-                          <td><i>6</i></td>
-                          <td><i>5</i></td>
-                          <td><i>4</i></td>
-                          <td><i>3</i></td>
-                          <td><i>2</i></td>
-                          <td><i>1</i></td>
-                        </tr>
-                        <tr>
-                          <th>VMS</th>
-                          <td>
-                            <span class="none">-</span>
-                          </td>
-                          <td>
-                            <span class="none">-</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>CA0</th>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th>CA1</th>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                          <td>
-                            <span>정상</span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <!-- //inner -->
-                </article>
-                <!-- //vms-state-container -->
-              </div>
-              <!-- //vms-group -->
-            </div>
-            <!-- //vms-bind -->
           </section>
           <!-- //ly-left -->
         </section>
