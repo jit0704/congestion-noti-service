@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>VMS 문구관리</title>
+    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/base/js/common/includeHTML.js"></script>
+    <!-- 퍼블리싱 확인용 include -->
+    <script type="text/javascript" src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" include-html="/base/html/common/header.html"></header>
+      <!-- //header -->
+
+      <main class="container bg-white">
+        <div class="list-type-admin vms-words-container">
+          <div class="filter-group-v2">
+            <span class="bind">
+              <select class="selectbox-v2">
+                <option>시나리오</option>
+                <option>시나리오2</option>
+                <option>시나리오3</option>
+              </select>
+              <select class="selectbox-v2">
+                <option>시나리오 유형</option>
+                <option>시나리오 유형2</option>
+                <option>시나리오 유형3</option>
+              </select>
+              <select class="selectbox-v2">
+                <option>VMS ID</option>
+                <option>VMS ID</option>
+                <option>VMS ID</option>
+              </select>
+            </span>
+            <!-- //bind -->
+            <button type="button" class="btn-gray-v2">조회</button>
+          </div>
+          <!-- //filter-group-v2 -->
+
+          <div class="tbl-sticky-v2">
+            <table>
+              <colgroup>
+                <col style="width: 40px;" />
+                <col style="width: 50px;" />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>
+                    <label class="chkbox-default-v2">
+                      <input type="checkbox" class="hidden" />
+                      <span class="txt"><em class="hidden">체크박스</em></span>
+                    </label>
+                  </th>
+                  <th>No</th>
+                  <th>시나리오</th>
+                  <th>시나리오 유형</th>
+                  <th>VMS ID</th>
+                  <th>VMS 유형</th>
+                  <th>이미지 번호</th>
+                  <th>서비스</th>
+                  <th>표출시간</th>
+                  <th>이미지 파일명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <label class="chkbox-default-v2">
+                      <input type="checkbox" class="hidden" />
+                      <span class="txt"><em class="hidden">체크박스</em></span>
+                    </label>
+                  </td>
+                  <td>1</td>
+                  <td>시나리오 시나리오</td>
+                  <td>영상식</td>
+                  <td>VMS ID 입력</td>
+                  <td>VMS 유형</td>
+                  <td>이미지 번호</td>
+                  <td>서비스</td>
+                  <td>표출시간 표출</td>
+                  <td>표출시간 표출</td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="chkbox-default-v2">
+                      <input type="checkbox" class="hidden" />
+                      <span class="txt"><em class="hidden">체크박스</em></span>
+                    </label>
+                  </td>
+                  <td>2</td>
+                  <td>시나리오 시나리오</td>
+                  <td>영상식</td>
+                  <td>VMS ID 입력</td>
+                  <td>VMS 유형</td>
+                  <td>이미지 번호</td>
+                  <td>서비스</td>
+                  <td>표출시간 표출</td>
+                  <td>표출시간 표출</td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="chkbox-default-v2">
+                      <input type="checkbox" class="hidden" />
+                      <span class="txt"><em class="hidden">체크박스</em></span>
+                    </label>
+                  </td>
+                  <td>3</td>
+                  <td>시나리오 시나리오</td>
+                  <td>영상식</td>
+                  <td>VMS ID 입력</td>
+                  <td>VMS 유형</td>
+                  <td>이미지 번호</td>
+                  <td>서비스</td>
+                  <td>표출시간 표출</td>
+                  <td>표출시간 표출</td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="chkbox-default-v2">
+                      <input type="checkbox" class="hidden" />
+                      <span class="txt"><em class="hidden">체크박스</em></span>
+                    </label>
+                  </td>
+                  <td>4</td>
+                  <td>시나리오 시나리오</td>
+                  <td>영상식</td>
+                  <td>VMS ID 입력</td>
+                  <td>VMS 유형</td>
+                  <td>이미지 번호</td>
+                  <td>서비스</td>
+                  <td>표출시간 표출</td>
+                  <td>표출시간 표출</td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="chkbox-default-v2">
+                      <input type="checkbox" class="hidden" />
+                      <span class="txt"><em class="hidden">체크박스</em></span>
+                    </label>
+                  </td>
+                  <td>5</td>
+                  <td>시나리오 시나리오</td>
+                  <td>영상식</td>
+                  <td>VMS ID 입력</td>
+                  <td>VMS 유형</td>
+                  <td>이미지 번호</td>
+                  <td>서비스</td>
+                  <td>표출시간 표출</td>
+                  <td>표출시간 표출</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl-sticky-v2 -->
+
+          <div class="vms-info">
+            <div class="vms-noti">
+              <span>VMS ID : 04VM000000399</span>
+              <span>이미지 번호 : 0001</span>
+            </div>
+            <!-- //vms-noti -->
+            <div class="vms-btns">
+              <button type="button" class="btn-bordered-v2 c-blue">원본 미리보기</button>
+              <button type="button" class="btn-bordered-v2 c-blue">편집 미리보기</button>
+              <button type="button" class="btn-bordered-v2 c-blue">이미지 VMS 전송</button>
+            </div>
+          </div>
+          <!-- //vms-info -->
+
+          <section class="ly-vms-words">
+            <article class="left">
+              <div class="words-container">
+                <header>이미지 편집</header>
+                <div class="words-body t1">
+                  <table class="tbl-edit">
+                    <tbody>
+                      <tr>
+                        <th>Height</th>
+                        <td><input type="number" class="input-txt" /></td>
+                        <th>Width</th>
+                        <td><input type="number" class="input-txt" /></td>
+                        <th>Top Margin</th>
+                        <td><input type="number" class="input-txt" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //words-container -->
+              <div class="words-container">
+                <header>이미지 영역</header>
+                <div class="words-body t2">
+                  <table class="tbl-edit">
+                    <colgroup>
+                      <col style="width: 90px;" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>텍스트 1</th>
+                        <td>
+                          <div>
+                            <input type="number" class="input-txt" />
+                            <select class="selectbox-v2">
+                              <option>white</option>
+                              <option>white</option>
+                              <option>white</option>
+                            </select>
+                            <select class="selectbox-v2">
+                              <option>폰트 크기</option>
+                              <option>12</option>
+                              <option>13</option>
+                            </select>
+                            <select class="selectbox-v2">
+                              <option>폰트 종류</option>
+                              <option>돋음</option>
+                              <option>맑은고딕</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>텍스트 2</th>
+                        <td>
+                          <div>
+                            <input type="number" class="input-txt" />
+                            <select class="selectbox-v2">
+                              <option>white</option>
+                              <option>white</option>
+                              <option>white</option>
+                            </select>
+                            <select class="selectbox-v2">
+                              <option>폰트 크기</option>
+                              <option>12</option>
+                              <option>13</option>
+                            </select>
+                            <select class="selectbox-v2">
+                              <option>폰트 종류</option>
+                              <option>돋음</option>
+                              <option>맑은고딕</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>텍스트 3</th>
+                        <td>
+                          <div>
+                            <input type="number" class="input-txt" />
+                            <select class="selectbox-v2">
+                              <option>white</option>
+                              <option>white</option>
+                              <option>white</option>
+                            </select>
+                            <select class="selectbox-v2">
+                              <option>폰트 크기</option>
+                              <option>12</option>
+                              <option>13</option>
+                            </select>
+                            <select class="selectbox-v2">
+                              <option>폰트 종류</option>
+                              <option>돋음</option>
+                              <option>맑은고딕</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>텍스트 4</th>
+                        <td>
+                          <div>
+                            <input type="number" class="input-txt" />
+                            <select class="selectbox-v2">
+                              <option>white</option>
+                              <option>white</option>
+                              <option>white</option>
+                            </select>
+                            <select class="selectbox-v2">
+                              <option>폰트 크기</option>
+                              <option>12</option>
+                              <option>13</option>
+                            </select>
+                            <select class="selectbox-v2">
+                              <option>폰트 종류</option>
+                              <option>돋음</option>
+                              <option>맑은고딕</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>텍스트 5</th>
+                        <td>
+                          <div>
+                            <input type="number" class="input-txt" />
+                            <select class="selectbox-v2">
+                              <option>white</option>
+                              <option>white</option>
+                              <option>white</option>
+                            </select>
+                            <select class="selectbox-v2">
+                              <option>폰트 크기</option>
+                              <option>12</option>
+                              <option>13</option>
+                            </select>
+                            <select class="selectbox-v2">
+                              <option>폰트 종류</option>
+                              <option>돋음</option>
+                              <option>맑은고딕</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- //words-container -->
+            </article>
+            <!-- //left -->
+
+            <article class="center">
+              <div class="words-container">
+                <header>이미지 편집</header>
+                <div class="words-body">
+                  <!-- 퍼블리싱 작업 확인을 위해 style속성 추가. 개발 파일에서는 삭제하시면 됩니다. -->
+                  <div class="display-words" style="width: 188px; height: 305px;">
+                    <span style="font-size: 44px; color: #fff;">청량 IC</span>
+                    <span style="font-size: 44px; color: greenyellow;">소통 원활</span>
+                  </div>
+                  <!-- 가로 버전 -->
+                  <!-- <div class="display-words horizontal" style="width: 553px; height: 79px;">
+                    <span style="font-size: 44px; color: #fff;">청량 IC</span>
+                    <span style="font-size: 44px; color: greenyellow;">소통 원활</span>
+                  </div> -->
+                </div>
+              </div>
+              <!-- //words-container -->
+            </article>
+            <!-- //center -->
+
+            <article class="right">
+              <div class="tbl-sticky-v2 type2">
+                <table>
+                  <colgroup>
+                    <col style="width: 50px;" />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>
+                        <label class="chkbox-default-v2">
+                          <input type="checkbox" class="hidden" />
+                          <span class="txt"><em class="hidden">체크박스</em></span>
+                        </label>
+                      </th>
+                      <th>VMS ID</th>
+                      <th>VMS 유형</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label class="chkbox-default-v2">
+                          <input type="checkbox" class="hidden" />
+                          <span class="txt"><em class="hidden">체크박스</em></span>
+                        </label>
+                      </td>
+                      <td>04VM000000399</td>
+                      <td>가로형</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="chkbox-default-v2">
+                          <input type="checkbox" class="hidden" />
+                          <span class="txt"><em class="hidden">체크박스</em></span>
+                        </label>
+                      </td>
+                      <td>04VM000000399</td>
+                      <td>가로형</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="chkbox-default-v2">
+                          <input type="checkbox" class="hidden" />
+                          <span class="txt"><em class="hidden">체크박스</em></span>
+                        </label>
+                      </td>
+                      <td>04VM000000399</td>
+                      <td>가로형</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="chkbox-default-v2">
+                          <input type="checkbox" class="hidden" />
+                          <span class="txt"><em class="hidden">체크박스</em></span>
+                        </label>
+                      </td>
+                      <td>04VM000000399</td>
+                      <td>가로형</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="chkbox-default-v2">
+                          <input type="checkbox" class="hidden" />
+                          <span class="txt"><em class="hidden">체크박스</em></span>
+                        </label>
+                      </td>
+                      <td>04VM000000399</td>
+                      <td>가로형</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="chkbox-default-v2">
+                          <input type="checkbox" class="hidden" />
+                          <span class="txt"><em class="hidden">체크박스</em></span>
+                        </label>
+                      </td>
+                      <td>04VM000000399</td>
+                      <td>가로형</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="chkbox-default-v2">
+                          <input type="checkbox" class="hidden" />
+                          <span class="txt"><em class="hidden">체크박스</em></span>
+                        </label>
+                      </td>
+                      <td>04VM000000399</td>
+                      <td>가로형</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="chkbox-default-v2">
+                          <input type="checkbox" class="hidden" />
+                          <span class="txt"><em class="hidden">체크박스</em></span>
+                        </label>
+                      </td>
+                      <td>04VM000000399</td>
+                      <td>가로형</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+            <!-- //right -->
+          </section>
+          <!-- //ly-vms-words -->
+        </div>
+        <!-- //list-type-admin -->
+      </main>
+      <!-- //container -->
+
+      <footer include-html="/base/html/common/footer2.html"></footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>

@@ -7,6 +7,13 @@ $(function () {
 });
 
 function cmmnui() {
+  // 240518추가: 달력 날짜 초기화
+  function dateInit() {
+    return new Date().toISOString().substring(0, 10);
+  }
+  $('[data-start="date-start"]').attr('value', dateInit());
+  $('[data-end="date-end"]').attr('value', dateInit());
+
   // 210930 추가 : input autocomplete 비활성화
   var $txtInput0 = $('[type="text"], [type="number"]');
   $txtInput0.attr('autocomplete', 'off');
