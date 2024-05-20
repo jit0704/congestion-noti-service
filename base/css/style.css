@@ -2070,11 +2070,13 @@ footer .copylight.bg-gray2 {
   border-radius: 5px;
 }
 .selectbox-v2 {
-  padding: 3.5px 25px 3.5px 10px;
+  height: 30px;
+  padding: 0 25px 0 10px;
   background: url(/base/images/arr_down.png) no-repeat calc(100% - 10px) 50%;
   background-size: 10px 6px;
   color: #727272;
   border: 1px solid #cbcbcb;
+  border-radius: 5px;
 }
 
 /* 테이블 */
@@ -3726,7 +3728,7 @@ footer .copylight.bg-gray2 {
   border-bottom: 1px solid #E8E8E8;
 }
 .ly-vms-words .words-container .t1 {
-  padding: 15px 68.5px;
+  padding: 15px 48px;
 }
 .ly-vms-words .words-container .t2 {
   padding: 29px 36px;
@@ -3751,17 +3753,22 @@ footer .copylight.bg-gray2 {
           justify-content: flex-start;
   gap: 0 5px;
 }
-.ly-vms-words .words-container .t2 .tbl-edit tbody td div input,
+.ly-vms-words .words-container .t2 .tbl-edit tbody td div .selectbox-v2:last-child {
+  width: 170px;
+}
+.ly-vms-words .words-container .t2 .tbl-edit tbody td div input {
+  width: 62px;
+}
 .ly-vms-words .words-container .t2 .tbl-edit tbody td div .selectbox-v2 {
   width: 126.25px;
 }
 .ly-vms-words .words-container .tbl-edit tbody th {
-  padding-right: 9px;
+  padding-inline: 9px;
   font-weight: 600;
   text-align: left;
 }
 .ly-vms-words .words-container .tbl-edit tbody td .input-txt {
-  width: 100px;
+  width: 62px;
   text-align: center;
   border-color: #E8E8E8;
 }
