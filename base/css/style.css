@@ -3179,7 +3179,6 @@ footer .copylight.bg-gray2 {
   right: 2px;
 }
 .congestion-noti-monitering .ly-content .vms-list li.error .condition {
-  background: url(/base/images/ic_none2.png) no-repeat 50% 50% #000;
   background-size: 79px 79px;
 }
 .congestion-noti-monitering .ly-content .vms-list li.error .btn-vms-del {
@@ -3242,7 +3241,6 @@ footer .copylight.bg-gray2 {
   background: transparent;
 }
 .congestion-noti-monitering .ly-content .vms-inline.error .condition {
-  background: url(/base/images/ic_none2.png) no-repeat 50% 45% #000;
   background-size: 55px 55px;
 }
 .congestion-noti-monitering .ly-content .vms-inline.error .condition .btn-vms-del {
@@ -5578,18 +5576,16 @@ footer .copylight.bg-gray2 {
 }
 
 /* 서비스 상태 관리 */
-[data-componant=setup] .tbl-sticky-inner.svc-stts {
-  height: calc(100vh - 380px);
+[data-componant=svcStts] .tbl-sticky-inner {
+  height: calc(100vh - 470px);
 }
 
-/* 지점 상태 관리 */
-[data-componant=setup] .tbl-sticky-inner.ctrl-stts {
+[data-componant=stts] .tbl-sticky-inner {
   height: calc(100vh - 280px);
 }
 
-/* vms 상태 관리 */
-[data-componant=setup] .tbl-sticky-inner.vms-stts {
-  height: calc(100vh - 280px);
+[data-componant=popStts] .tbl-sticky-inner {
+  height: calc(100vh - 350px);
 }
 
 /*맵 줌슬라이더, 줌인/줌아웃 버튼*/
@@ -5996,4 +5992,279 @@ footer .copylight.bg-gray2 {
   padding: 15px 15px 15px 30px;
   margin-top: 330px;
   margin-left: 30px;
+}
+
+/* VMS 시나리오 관리 */
+.vmsScnro-manage .tbl-list-header {
+  margin: 18px 0 13px;
+}
+
+.vmsScnro-manage .tbl-list-header h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+.vmsScnro-manage .tbl-list-header .btn-default + .btn-default {
+  margin-left: 10px;
+}
+
+.vmsScnro-manage.list-division .ly-left {
+  width: 1200px;
+  height: calc(100vh - 270px);
+}
+
+.vmsScnro-manage.list-division .ly-left .tbl-sticky {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+.vmsScnro-manage.list-division .ly-left .tbl-sticky-inner {
+  height: calc(100vh - 275px);
+  min-height: 100%;
+}
+
+.vmsScnro-manage.list-division .ly-left .tbl-sticky-inner td {
+  cursor: pointer;
+}
+
+.vmsScnro-manage.list-division .ly-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: calc(100% - 800px);
+  margin-top: 2px;
+  margin-left: 20px;
+  height: calc(100% - 250px);
+}
+
+.vmsScnro-manage.list-division .ly-right .tbl-border-none {
+  position: relative;
+  height: 100%;
+  padding: 15px 20px 11px 0;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+.vmsScnro-manage.list-division .ly-right.fac .tbl-border-none {
+  position: relative;
+  height: 100%;
+  padding: 15px 20px 53px 0;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+.vmsScnro-manage.list-division .ly-right .tbl-border-none th {
+  height: 48px;
+  padding-left: 24px;
+  font-weight: 700;
+}
+
+.vmsScnro-manage.list-division .ly-right .tbl-border-none td not:show {
+  height: 48px;
+  padding: 5px 0;
+}
+
+.vmsScnro-manage.list-division .ly-right .tbl-border-none td .selectbox {
+  background-position-x: 97%;
+}
+
+.vmsScnro-manage.list-division .ly-right .tbl-border-none td .input-value-group i {
+  margin-top: 0;
+}
+
+.vmsScnro-manage.list-division .ly-right .tbl-border-none .btn-block {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 15px;
+  width: calc(100% - 40px);
+}
+
+.vmsScnro-manage.container.bg-white {
+  overflow-y: auto;
+  padding: 12px 30px;
+}
+
+.vmsScnro-manage textarea {
+  width: 100%;
+  height: 6.25em;
+  border: none;
+  resize: none;
+}
+
+.vmsScnro-manage .vmsImg {
+  border: solid 1px;
+  margin: 10px 0px 10px 10px;
+  padding: 5px 5px 5px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 357px;
+  overflow: hidden;
+}
+
+.vmsScnro-manage .vmsImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/* VMS 데이터 관리 */
+.vmsData-manage .tbl-list-header {
+  margin-top: 0;
+}
+
+.vmsData-manage .tbl-list-header h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+.vmsData-manage .tbl-list-header .btn-default + .btn-default {
+  margin-left: 10px;
+}
+
+.vmsData-manage.list-division .ly-left {
+  margin: 18px 0 13px;
+  width: 1200px;
+  height: calc(100vh - 310px);
+}
+
+.vmsData-manage.list-division .ly-left .tbl-sticky {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+.vmsData-manage.list-division .ly-left .tbl-sticky-inner {
+  height: calc(100vh - 275px);
+  min-height: 100%;
+}
+
+.vmsData-manage.list-division .ly-left .tbl-sticky-inner td {
+  cursor: pointer;
+}
+
+.vmsData-manage.list-division .ly-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: calc(100% - 800px);
+  margin-top: 20px;
+  margin-left: 20px;
+  height: calc(100% - 250px);
+}
+
+.vmsData-manage.list-division .ly-right .tbl-border-none {
+  position: relative;
+  height: 100%;
+  padding: 15px 20px 14px 0;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+.vmsData-manage.list-division .ly-right.fac .tbl-border-none {
+  position: relative;
+  height: 100%;
+  padding: 15px 20px 53px 0;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+.vmsData-manage.list-division .ly-right .tbl-border-none th {
+  height: 48px;
+  padding-left: 24px;
+  font-weight: 700;
+}
+
+.vmsData-manage.list-division .ly-right .tbl-border-none td not:show {
+  height: 48px;
+  padding: 5px 0;
+}
+
+.vmsData-manage.list-division .ly-right .tbl-border-none td .selectbox {
+  background-position-x: 97%;
+}
+
+.vmsData-manage.list-division .ly-right .tbl-border-none td .input-value-group i {
+  margin-top: 0;
+}
+
+.vmsData-manage.list-division .ly-right .tbl-border-none .btn-block {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 15px;
+  width: calc(100% - 40px);
+}
+
+.vmsData-manage.container.bg-white {
+  overflow-y: auto;
+  padding: 12px 30px;
+}
+
+.vmsData-manage textarea {
+  width: 100%;
+  height: 6.25em;
+  border: none;
+  resize: none;
+}
+
+.vmsData-manage .vmsImg {
+  padding-left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 385px;
+  overflow: hidden; /* 부모 요소 넘치는 부분 숨김 */
+}
+
+.vmsData-manage .vmsImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain; /* 이미지를 확대하거나 축소하여 부모 요소에 맞춤 */
 }
