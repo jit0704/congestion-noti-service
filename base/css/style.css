@@ -3848,6 +3848,8 @@ footer .copylight.bg-gray2 {
 }
 .ly-vms-words > .left .words-body .bind.t2 .tbl-edit tbody td div .selectbox-v2 {
   width: 126.25px;
+  height: 32px;
+  border-color: #E8E8E8;
 }
 .ly-vms-words > .left .words-body .bind .tbl-edit {
   margin-top: 15px;
@@ -3989,18 +3991,22 @@ footer .copylight.bg-gray2 {
       -ms-flex-pack: start;
           justify-content: flex-start;
   gap: 0 10px;
+  overflow-y: auto;
   padding: 40px;
   border: 1px solid #E8E8E8;
   border-left: 0;
 }
 .scenario-display li {
-  overflow-y: auto;
   width: 124px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100%;
   border: 1px solid #DFDFDF;
 }
 .scenario-display li i {
   position: sticky;
-  top: 0;
+  top: -40px;
   display: block;
   padding: 20.5px 0 35.5px 15px;
   color: #59839E;
@@ -4047,6 +4053,12 @@ footer .copylight.bg-gray2 {
   margin: 0 auto 21px;
   background: #000;
 }
+.scenario-display li > div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .scenario-display li > div span {
   font-size: 22px;
   font-weight: 700;
@@ -4056,6 +4068,216 @@ footer .copylight.bg-gray2 {
 }
 .scenario-display li > div span:last-child {
   color: #05ff00;
+}
+
+/* ###############################
+    TO-BE 디자인 style
+################################## */
+/* 공통 */
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1E5F8D;
+}
+.section-title.only {
+  margin-bottom: 15px;
+  line-height: 31px;
+}
+.section-title-bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-control {
+  padding: 25px;
+  border: 1px solid #E8E8E8;
+}
+.form-control table tbody tr:first-child th, .form-control table tbody tr:first-child td {
+  padding-top: 0;
+}
+.form-control table tbody th {
+  padding-top: 5px;
+  padding-inline: 20px;
+  text-align: left;
+  font-weight: 600;
+}
+.form-control table tbody th:first-child {
+  padding-left: 0;
+}
+.form-control table tbody td {
+  padding-top: 5px;
+}
+.form-control table tbody td .input-txt {
+  border-color: #E8E8E8;
+}
+.form-control table tbody td .selectbox-v2 {
+  width: 100%;
+  height: 32px;
+  border-color: #E8E8E8;
+}
+
+.grid-vms-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0 20px;
+  height: 718px;
+  margin-top: 20px;
+}
+.grid-vms-data > article {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.grid-vms-data .left .tbl-sticky-v2 {
+  height: calc(100% - 46px);
+}
+.grid-vms-data .right > .bind + .bind {
+  margin-top: 20px;
+}
+.grid-vms-data .right .img-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  border: 1px solid #E8E8E8;
+}
+.grid-vms-data .right .img-info-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000;
+}
+.grid-vms-data .right .img-info-display span {
+  font-size: 44px;
+  font-weight: 700;
+}
+.grid-vms-data .right .img-info-display span:first-child {
+  color: greenyellow;
+}
+.grid-vms-data .right .img-info-display span:last-child {
+  color: yellow;
+}
+
+/* VMS 데이터/시나리오 관리 */
+.vms-data-scenario-container .filter-group-v2 .selectbox-v2 {
+  min-width: 160px;
+}
+.vms-data-scenario-container .grid-vms-data .right .img-info {
+  height: calc(100% - 298px);
+}
+.vms-data-scenario-container .grid-vms-data .right .img-info-display {
+  width: 188px;
+  height: 350px;
+}
+.vms-data-scenario-container .grid-vms-data .right .img-info-display img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.vms-data-scenario-container .grid-vms-data.scenario .right .bind:last-child {
+  height: calc(100% - 261px);
+}
+.vms-data-scenario-container .grid-vms-data.scenario .right .bind .img-info-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0 20px;
+  height: calc(100% - 46px);
+  margin-top: 0;
+  padding: 25px;
+  border: 1px solid #E8E8E8;
+}
+.vms-data-scenario-container .grid-vms-data.scenario .right .bind .img-info-wrap .form-control {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0;
+  border: 0;
+}
+.vms-data-scenario-container .grid-vms-data.scenario .right .bind .img-info-wrap .form-control table {
+  height: 100%;
+}
+.vms-data-scenario-container .grid-vms-data.scenario .right .bind .img-info-wrap .img-info-display {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+  height: 100%;
+  border: 1px solid #333;
+  background: #fff;
+}
+.vms-data-scenario-container .grid-vms-data.scenario .right .bind .img-info-wrap .img-info-display .bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 10px;
+  width: 100%;
+  height: 52px;
+  background: #000;
+}
+.vms-data-scenario-container .grid-vms-data.scenario .right .bind .img-info-wrap .img-info-display .bind img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* ###############################
