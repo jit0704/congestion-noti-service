@@ -711,6 +711,16 @@ footer .copylight.bg-gray2 {
   padding: 0;
   border-radius: 5px;
 }
+.modal .list-type-admin {
+  padding: 0;
+}
+.modal .tbl-sticky-v2 thead th {
+  text-align: center;
+}
+.modal .paging-wrap {
+  margin-top: 20px;
+  padding-inline: 0;
+}
 .modal .log {
   width: 1400px;
   padding: 0;
@@ -759,6 +769,10 @@ footer .copylight.bg-gray2 {
 .modal-primary {
   width: 555px;
   padding: 0 0 26px;
+}
+.modal-primary.w-lg {
+  width: 1400px;
+  padding: 0;
 }
 .modal-primary ~ a.close-modal {
   top: 3px;
@@ -4215,6 +4229,27 @@ footer .copylight.bg-gray2 {
   height: 100%;
 }
 
+.paging-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-inline: 46px;
+  color: #727272;
+}
+.paging-wrap .paging-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
 /* VMS 데이터/시나리오 관리 */
 .vms-data-scenario-container .filter-group-v2 .selectbox-v2 {
   min-width: 160px;
@@ -4337,6 +4372,35 @@ footer .copylight.bg-gray2 {
 .unexpected-record-container .grid-vms-data .right .video-record video {
   -o-object-fit: fill;
      object-fit: fill;
+}
+
+/* 서비스 상태 관리 */
+.service-condition-container > .tbl-sticky-v2 {
+  height: auto;
+  border-bottom: 0;
+}
+.service-condition-container .grid-vms-data-simple {
+  margin-top: 25px;
+  height: 540px;
+}
+.service-condition-container .grid-vms-data-simple .filter-group-v2 {
+  margin-bottom: 25px;
+}
+.service-condition-container .grid-vms-data-simple .tbl-sticky-v2 {
+  height: calc(100% - 55px);
+}
+
+/* 지점 상태 관리 */
+.branch-condition-container .grid-vms-data-simple {
+  height: 720px;
+}
+
+/* 지점 상태 상세 이력 팝업 */
+.pop-condition-bg-container .filter-group-v2 {
+  margin-bottom: 25px;
+}
+.pop-condition-bg-container .grid-vms-data-simple {
+  height: 650px;
 }
 
 /* ###############################

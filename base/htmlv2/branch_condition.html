@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>지점 상태 관리</title>
+    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/base/js/common/includeHTML.js"></script>
+    <!-- 퍼블리싱 확인용 include -->
+    <script type="text/javascript" src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" include-html="/base/html/common/header.html"></header>
+      <!-- //header -->
+
+      <main class="container bg-white">
+        <div class="list-type-admin branch-condition-container">
+          <em class="section-title only">지점 상태 관리</em>
+
+          <div class="grid-vms-data-simple">
+            <div class="tbl-sticky-v2">
+              <table>
+                <colgroup>
+                  <col style="width: 100px;" />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col />
+                  <col style="width: 190px;" />
+                  <col style="width: 100px;" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>NO</th>
+                    <th>지점 ID</th>
+                    <th>지점 명</th>
+                    <th>전원</th>
+                    <th>통신 상태</th>
+                    <th>함체문 상태</th>
+                    <th>Fan 동작 상태</th>
+                    <th>Heater 동작 상태</th>
+                    <th>함체 온도</th>
+                    <th>일시</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>04IDS35102</td>
+                    <td>지점1</td>
+                    <td>0V</td>
+                    <td>오류</td>
+                    <td>알수없음</td>
+                    <td>알수없음</td>
+                    <td>알수없음</td>
+                    <td>-128</td>
+                    <td>2024-05-08 21:45:00</td>
+                    <td>
+                      <button type="button" class="btn-bordered-v2 c-blue">이력</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>04IDS35102</td>
+                    <td>지점2</td>
+                    <td>0V</td>
+                    <td>오류</td>
+                    <td>알수없음</td>
+                    <td>알수없음</td>
+                    <td>알수없음</td>
+                    <td>-128</td>
+                    <td>2024-05-08 21:45:00</td>
+                    <td>
+                      <button type="button" class="btn-bordered-v2 c-blue">이력</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //tbl-sticky-v2 -->
+          </div>
+          <!-- //grid-vms-data-simple -->
+        </div>
+        <!-- //list-type-admin -->
+      </main>
+      <!-- //container -->
+
+      <footer include-html="/base/html/common/footer2.html"></footer>
+      <!-- //footer -->
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>
