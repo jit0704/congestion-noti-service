@@ -4352,13 +4352,18 @@ footer .copylight.bg-gray2 {
 .unexpected-record-container .filter-group-v2 .bind .selectbox-v2 {
   width: 140px;
 }
+.unexpected-record-container .grid-vms-data {
+  height: 672px;
+}
 .unexpected-record-container .grid-vms-data .left {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1250px;
           flex: 0 0 1250px;
 }
+.unexpected-record-container .grid-vms-data .left .tbl-sticky-v2 {
+  height: 100%;
+}
 .unexpected-record-container .grid-vms-data .right {
-  margin-top: 46px;
   padding: 20px;
   border: 1px solid #E8E8E8;
 }
